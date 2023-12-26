@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import { ChakraProvider } from '@/providers';
 
 export const metadata: Metadata = {
   title: 'Technician Dashboard',
@@ -14,7 +12,9 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <ChakraProvider>{children}</ChakraProvider>
+      </body>
     </html>
   );
 };
