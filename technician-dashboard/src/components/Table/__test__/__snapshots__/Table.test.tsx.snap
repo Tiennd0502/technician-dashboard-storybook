@@ -1,0 +1,443 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table test cases should render correctly 1`] = `
+<div>
+  <div
+    class="css-151fgvf"
+  >
+    <div
+      class="css-de1gzo"
+    >
+      <h2
+        class="chakra-heading css-1po99kh"
+      >
+        Products listing
+      </h2>
+      <div
+        class="chakra-button css-k0j37o"
+      >
+        Filter 
+        <svg
+          fill="none"
+          height="18"
+          viewBox="0 0 16 18"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M10.0571 8.49269H15.4857C15.7333 8.49269 15.9619 8.72684 15.9619 8.98049C15.9619 9.25366 15.7524 9.4683 15.4857 9.4683H10.0571C9.8476 10.4634 8.97141 11.2049 7.94284 11.2049C6.91427 11.2049 6.03808 10.4634 5.82856 9.4683H0.533319C0.266653 9.4683 0.0571289 9.25366 0.0571289 8.98049C0.0571289 8.70732 0.266653 8.49269 0.533319 8.49269H5.82856C6.03808 7.49757 6.91427 6.7561 7.94284 6.7561C8.97141 6.7561 9.8476 7.49757 10.0571 8.49269ZM6.7238 8.98049C6.7238 9.66342 7.27618 10.2293 7.94284 10.2293C8.60951 10.2293 9.16189 9.66342 9.16189 8.98049C9.16189 8.29757 8.60951 7.73171 7.94284 7.73171C7.27618 7.73171 6.7238 8.29757 6.7238 8.98049Z"
+            fill="#222"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M4.36192 3.82938C4.15239 4.8245 3.2762 5.56597 2.24763 5.56597C1.04763 5.56597 0.0762024 4.55133 0.0762024 3.34158C0.0762024 2.13182 1.04763 1.11719 2.24763 1.11719C3.2762 1.11719 4.15239 1.85865 4.36192 2.85377H15.4667C15.7333 2.85377 15.9429 3.06841 15.9429 3.34158C15.9429 3.61475 15.7333 3.82938 15.4667 3.82938H4.36192ZM3.46668 3.34158C3.46668 2.65865 2.9143 2.0928 2.24763 2.0928C1.58096 2.0928 1.02858 2.65865 1.02858 3.34158C1.02858 4.0245 1.58096 4.59036 2.24763 4.59036C2.9143 4.59036 3.46668 4.0245 3.46668 3.34158Z"
+            fill="#222"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M11.6571 14.1512C11.8857 13.1755 12.7428 12.4341 13.7714 12.4341C14.9524 12.4341 15.9428 13.4292 15.9428 14.6585C15.9428 15.8877 14.9714 16.8829 13.7714 16.8829C12.7428 16.8829 11.8667 16.1219 11.6571 15.1268H0.533319C0.266653 15.1268 0.0571289 14.9121 0.0571289 14.639C0.0571289 14.3658 0.266653 14.1512 0.533319 14.1512H11.6571ZM12.5524 14.639C12.5524 15.3219 13.1047 15.8877 13.7714 15.8877C14.4381 15.8877 14.9905 15.3219 14.9905 14.639C14.9905 13.956 14.4381 13.3902 13.7714 13.3902C13.1047 13.3902 12.5524 13.956 12.5524 14.639Z"
+            fill="#222"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="css-1m4t6sw"
+    >
+      <div
+        class="css-17i2wn"
+        role="list"
+      >
+        <div
+          class="css-c8uo9c"
+        />
+        <div
+          class="css-16f0jog"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            Product name
+          </p>
+          <div
+            class="css-1gb1rig"
+          >
+            <svg
+              class="chakra-icon css-11mwvlo"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12.8,5.4c-0.377-0.504-1.223-0.504-1.6,0l-9,12c-0.228,0.303-0.264,0.708-0.095,1.047 C2.275,18.786,2.621,19,3,19h18c0.379,0,0.725-0.214,0.895-0.553c0.169-0.339,0.133-0.744-0.095-1.047L12.8,5.4z"
+                fill="currentColor"
+              />
+            </svg>
+            <svg
+              class="chakra-icon css-weiglo"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21,5H3C2.621,5,2.275,5.214,2.105,5.553C1.937,5.892,1.973,6.297,2.2,6.6l9,12 c0.188,0.252,0.485,0.4,0.8,0.4s0.611-0.148,0.8-0.4l9-12c0.228-0.303,0.264-0.708,0.095-1.047C21.725,5.214,21.379,5,21,5z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="css-ty3ry7"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            Brand name
+          </p>
+        </div>
+        <div
+          class="css-p3ab7x"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            Service
+          </p>
+        </div>
+        <div
+          class="css-1kj85ga"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            Status
+          </p>
+        </div>
+        <div
+          class="css-1n3sooa"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            Actions
+          </p>
+        </div>
+      </div>
+      <div
+        class="css-zfiscw"
+      >
+        <div
+          class="css-kzcie9"
+        >
+          <div
+            class="css-13f3c3a"
+          >
+            <label
+              class="chakra-checkbox css-1elxtiq"
+              data-disabled=""
+            >
+              <input
+                aria-disabled="true"
+                class="chakra-checkbox__input"
+                disabled=""
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="checkbox"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="chakra-checkbox__control css-dnty2r"
+                data-disabled=""
+              />
+            </label>
+          </div>
+          <div
+            class="css-lsigov"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Washing machine
+            </p>
+          </div>
+          <div
+            class="css-dq1g6v"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Hitachi
+            </p>
+          </div>
+          <div
+            class="css-1gyiejn"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Repair
+            </p>
+          </div>
+          <div
+            class="css-ug13tv"
+          >
+            <div
+              class="css-70qvj9"
+            >
+              <div
+                class="chakra-icon css-19b2uvg"
+                focusable="false"
+              />
+              <p
+                class="chakra-text css-0"
+                data-testid="status-value"
+              >
+                Activated
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-1e474gu"
+          />
+        </div>
+      </div>
+      <div
+        class="css-zfiscw"
+      >
+        <div
+          class="css-kzcie9"
+        >
+          <div
+            class="css-13f3c3a"
+          >
+            <label
+              class="chakra-checkbox css-1elxtiq"
+              data-disabled=""
+            >
+              <input
+                aria-disabled="true"
+                class="chakra-checkbox__input"
+                disabled=""
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="checkbox"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="chakra-checkbox__control css-dnty2r"
+                data-disabled=""
+              />
+            </label>
+          </div>
+          <div
+            class="css-lsigov"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Air conditioner
+            </p>
+          </div>
+          <div
+            class="css-dq1g6v"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              LG
+            </p>
+          </div>
+          <div
+            class="css-1gyiejn"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Installation
+            </p>
+          </div>
+          <div
+            class="css-ug13tv"
+          >
+            <div
+              class="css-70qvj9"
+            >
+              <div
+                class="chakra-icon css-crig9m"
+                focusable="false"
+              />
+              <p
+                class="chakra-text css-0"
+                data-testid="status-value"
+              >
+                Deactivated
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-1e474gu"
+          />
+        </div>
+      </div>
+      <div
+        class="css-zfiscw"
+      >
+        <div
+          class="css-kzcie9"
+        >
+          <div
+            class="css-13f3c3a"
+          >
+            <label
+              class="chakra-checkbox css-1elxtiq"
+              data-disabled=""
+            >
+              <input
+                aria-disabled="true"
+                class="chakra-checkbox__input"
+                disabled=""
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="checkbox"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="chakra-checkbox__control css-dnty2r"
+                data-disabled=""
+              />
+            </label>
+          </div>
+          <div
+            class="css-lsigov"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Smart TV
+            </p>
+          </div>
+          <div
+            class="css-dq1g6v"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              OnePlus
+            </p>
+          </div>
+          <div
+            class="css-1gyiejn"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Uninstallation
+            </p>
+          </div>
+          <div
+            class="css-ug13tv"
+          >
+            <div
+              class="css-70qvj9"
+            >
+              <div
+                class="chakra-icon css-19b2uvg"
+                focusable="false"
+              />
+              <p
+                class="chakra-text css-0"
+                data-testid="status-value"
+              >
+                Activated
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-1e474gu"
+          />
+        </div>
+      </div>
+      <div
+        class="css-zfiscw"
+      >
+        <div
+          class="css-kzcie9"
+        >
+          <div
+            class="css-13f3c3a"
+          >
+            <label
+              class="chakra-checkbox css-1elxtiq"
+              data-disabled=""
+            >
+              <input
+                aria-disabled="true"
+                class="chakra-checkbox__input"
+                disabled=""
+                style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                type="checkbox"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="chakra-checkbox__control css-dnty2r"
+                data-disabled=""
+              />
+            </label>
+          </div>
+          <div
+            class="css-lsigov"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Water purifier
+            </p>
+          </div>
+          <div
+            class="css-dq1g6v"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Kent
+            </p>
+          </div>
+          <div
+            class="css-1gyiejn"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              Repair
+            </p>
+          </div>
+          <div
+            class="css-ug13tv"
+          >
+            <div
+              class="css-70qvj9"
+            >
+              <div
+                class="chakra-icon css-19b2uvg"
+                focusable="false"
+              />
+              <p
+                class="chakra-text css-0"
+                data-testid="status-value"
+              >
+                Activated
+              </p>
+            </div>
+          </div>
+          <div
+            class="css-1e474gu"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
