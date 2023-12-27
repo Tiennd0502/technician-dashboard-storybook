@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox component should render correctly 1`] = `
+<div>
+  <div
+    class="chakra-input__group css-bx0blc"
+    data-group="true"
+  >
+    <input
+      class="chakra-input css-g5hezf"
+      placeholder="Enter keyword..."
+      value=""
+    />
+    <div
+      class="chakra-input__right-element css-eezmgu"
+      data-testid="search-icon"
+    >
+      <svg
+        class="chakra-icon css-onkibi"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M23.384,21.619,16.855,15.09a9.284,9.284,0,1,0-1.768,1.768l6.529,6.529a1.266,1.266,0,0,0,1.768,0A1.251,1.251,0,0,0,23.384,21.619ZM2.75,9.5a6.75,6.75,0,1,1,6.75,6.75A6.758,6.758,0,0,1,2.75,9.5Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
