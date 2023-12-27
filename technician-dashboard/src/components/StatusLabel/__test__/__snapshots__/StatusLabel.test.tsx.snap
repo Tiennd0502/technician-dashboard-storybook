@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatusLabel component should render correctly 1`] = `
+<div>
+  <div
+    class="css-70qvj9"
+  >
+    <div
+      class="chakra-icon css-19b2uvg"
+      focusable="false"
+    />
+    <p
+      class="chakra-text css-0"
+      data-testid="status-value"
+    >
+      Activated
+    </p>
+  </div>
+</div>
+`;
