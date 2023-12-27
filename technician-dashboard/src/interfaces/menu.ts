@@ -1,8 +1,6 @@
-import { ReactElement } from 'react';
-
 export interface Menu {
   id: string;
-  leftIcon: () => ReactElement;
+  leftIcon: (props: any) => JSX.Element;
   label: string;
   href: string;
 }
