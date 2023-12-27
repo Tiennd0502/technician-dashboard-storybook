@@ -24,7 +24,7 @@ export const MENU_ITEM_LIST = [
     id: '3',
     leftIcon: TechnicianIcon,
     label: 'Technicians',
-    href: '#',
+    href: '/technicians',
   },
   {
     id: '4',
