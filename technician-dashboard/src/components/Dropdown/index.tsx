@@ -1,3 +1,5 @@
+'use client';
+
 import { memo } from 'react';
 import { Avatar, Flex, Button, Text, Menu, MenuItem, MenuButton, MenuList } from '@chakra-ui/react';
 

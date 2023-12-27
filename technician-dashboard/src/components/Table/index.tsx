@@ -1,3 +1,5 @@
+'use client';
+
 import { memo } from 'react';
 import { Heading, Text, Flex, Box, Button, Checkbox, useMediaQuery } from '@chakra-ui/react';
 import { TriangleDownIcon, TriangleUpIcon } from '@chakra-ui/icons';
