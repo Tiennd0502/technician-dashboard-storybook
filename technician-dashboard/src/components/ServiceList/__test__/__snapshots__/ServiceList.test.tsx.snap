@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceList test cases should render correctly 1`] = `
+<div>
+  <div
+    class="css-1j52cd2"
+    role="list"
+  >
+    <a
+      class="chakra-link css-1r22un5"
+    >
+      <img
+        alt="Carpenter"
+        class="chakra-image css-1fayruo"
+        src="https://i.ibb.co/7WfPDMJ/service01.png"
+      />
+      <div
+        class="css-1g4yje1"
+        justify-content="flex-end"
+      >
+        <div
+          class="css-17xejub"
+        />
+        <p
+          class="chakra-text css-od0eia"
+        >
+          Carpenter
+        </p>
+        <p
+          class="chakra-text css-18bew60"
+        >
+          €45
+        </p>
+      </div>
+    </a>
+    <a
+      class="chakra-link css-1r22un5"
+    >
+      <img
+        alt="Ac Service & repair"
+        class="chakra-image css-1fayruo"
+        src="https://i.ibb.co/G069RKZ/service02.png"
+      />
+      <div
+        class="css-1g4yje1"
+        justify-content="flex-end"
+      >
+        <div
+          class="css-17xejub"
+        />
+        <p
+          class="chakra-text css-od0eia"
+        >
+          Ac Service & repair
+        </p>
+        <p
+          class="chakra-text css-18bew60"
+        >
+          €25
+        </p>
+      </div>
+    </a>
+    <a
+      class="chakra-link css-1r22un5"
+    >
+      <img
+        alt="Kitchecn Deep Cleaning"
+        class="chakra-image css-1fayruo"
+        src="https://i.ibb.co/nw3YSHS/service03.png"
+      />
+      <div
+        class="css-1g4yje1"
+        justify-content="flex-end"
+      >
+        <div
+          class="css-17xejub"
+        />
+        <p
+          class="chakra-text css-od0eia"
+        >
+          Kitchecn Deep Cleaning
+        </p>
+        <p
+          class="chakra-text css-18bew60"
+        >
+          €30
+        </p>
+      </div>
+    </a>
+    <a
+      class="chakra-link css-1r22un5"
+    >
+      <img
+        alt="Electrician"
+        class="chakra-image css-1fayruo"
+        src="https://i.ibb.co/Cvnw8GY/service04.png"
+      />
+      <div
+        class="css-1g4yje1"
+        justify-content="flex-end"
+      >
+        <div
+          class="css-17xejub"
+        />
+        <p
+          class="chakra-text css-od0eia"
+        >
+          Electrician
+        </p>
+        <p
+          class="chakra-text css-18bew60"
+        >
+          €50
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
+`;
