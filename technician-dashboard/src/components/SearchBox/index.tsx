@@ -1,3 +1,5 @@
+'use client';
+
 import { memo, useState, useCallback, ChangeEvent, KeyboardEvent } from 'react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/react';
