@@ -11,3 +11,4 @@ export { default as ServiceList } from './ServiceList';
 export { default as Technician } from './Technician';
 export { default as ProductStatistics } from './ProductStatistics';
 export { default as Dropdown } from './Dropdown';
+export { default as Header } from './Header';
