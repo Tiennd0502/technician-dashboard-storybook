@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductStatistics test cases should render correctly 1`] = `
+<div>
+  <div
+    class="css-kbu70o"
+  >
+    <div
+      class="css-69i1ev"
+    >
+      <h3
+        class="chakra-heading css-0"
+      >
+        Total Products
+      </h3>
+      <p
+        class="chakra-text css-0"
+      >
+        350
+      </p>
+    </div>
+    <div
+      class="css-1pxgmwj"
+    >
+      <img
+        alt="Total product"
+        class="chakra-image css-1jonlwm"
+        src="total-product.png"
+      />
+    </div>
+    <div
+      class="css-gg4vpm"
+    >
+      <button
+        class="chakra-button css-4xx2wk"
+        type="button"
+      >
+        <div
+          class="css-70qvj9"
+        >
+          <div
+            class="chakra-icon css-19b2uvg"
+            focusable="false"
+          />
+          <p
+            class="chakra-text css-0"
+            data-testid="status-value"
+          >
+            Activated
+          </p>
+        </div>
+      </button>
+      <button
+        class="chakra-button css-4xx2wk"
+        type="button"
+      >
+        <div
+          class="css-70qvj9"
+        >
+          <div
+            class="chakra-icon css-crig9m"
+            focusable="false"
+          />
+          <p
+            class="chakra-text css-0"
+            data-testid="status-value"
+          >
+            Deactivated
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
