@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceCard test cases should render correctly 1`] = `
+<div>
+  <a
+    class="chakra-link css-1r22un5"
+  >
+    <img
+      alt="Carpenter"
+      class="chakra-image css-1fayruo"
+      src="https://i.ibb.co/7WfPDMJ/service01.png"
+    />
+    <div
+      class="css-1g4yje1"
+      justify-content="flex-end"
+    >
+      <div
+        class="css-17xejub"
+      />
+      <p
+        class="chakra-text css-od0eia"
+      >
+        Carpenter
+      </p>
+      <p
+        class="chakra-text css-18bew60"
+      >
+        €45
+      </p>
+    </div>
+  </a>
+</div>
+`;
