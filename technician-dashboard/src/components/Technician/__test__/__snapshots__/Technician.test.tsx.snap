@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Technician test cases should render correctly 1`] = `
+<div>
+  <div
+    class="css-neaj8j"
+  >
+    <h2
+      class="chakra-heading css-0"
+    >
+      Add Technicians
+    </h2>
+    <p
+      class="chakra-text css-0"
+    >
+      Click on the  
+      <span
+        class="chakra-text css-ss2gmn"
+      >
+        Email 
+      </span>
+      & send the magic link to technicians
+    </p>
+    <img
+      alt="Technicians"
+      class="chakra-image css-42igfv"
+      src="technician.png"
+    />
+  </div>
+</div>
+`;
