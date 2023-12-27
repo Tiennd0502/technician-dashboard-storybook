@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown test cases should render correctly 1`] = `
+<div>
+  <button
+    aria-controls="menu-list-:r1:"
+    aria-expanded="false"
+    aria-haspopup="menu"
+    class="chakra-button chakra-menu__menu-button css-4xx2wk"
+    id="menu-button-:r1:"
+    type="button"
+  >
+    <span
+      class="css-xl71ch"
+    >
+      <div
+        class="css-guqklo"
+      >
+        <span
+          class="chakra-avatar css-1ruhx4w"
+        >
+          <div
+            aria-label="John"
+            class="chakra-avatar__initials css-0"
+            role="img"
+          >
+            J
+          </div>
+        </span>
+        <p
+          class="chakra-text css-0"
+        >
+          John
+        </p>
+      </div>
+    </span>
+    <span
+      class="chakra-button__icon css-1hzyiq5"
+    >
+      <svg
+        aria-hidden="true"
+        class="chakra-icon css-q5208i"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  </button>
+  <div
+    class="css-0"
+    style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+  >
+    <div
+      aria-orientation="vertical"
+      class="chakra-menu__menu-list css-sjt5nk"
+      data-testid="dropdown-options"
+      id="menu-list-:r1:"
+      role="menu"
+      style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+      tabindex="-1"
+    >
+      <button
+        class="chakra-menu__menuitem css-1k756t9"
+        data-index="0"
+        id="menu-list-:r1:-menuitem-:r2:"
+        role="menuitem"
+        tabindex="-1"
+        type="button"
+      >
+        Profile
+      </button>
+      <button
+        class="chakra-menu__menuitem css-1k756t9"
+        data-index="1"
+        id="menu-list-:r1:-menuitem-:r3:"
+        role="menuitem"
+        tabindex="-1"
+        type="button"
+      >
+        Change password
+      </button>
+    </div>
+  </div>
+</div>
+`;
