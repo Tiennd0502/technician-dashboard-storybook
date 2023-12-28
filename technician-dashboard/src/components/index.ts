@@ -7,6 +7,7 @@ export { default as Categories } from './Categories';
 export { default as SearchBox } from './SearchBox';
 export { default as StatusLabel } from './StatusLabel';
 export { default as Table } from './Table';
+export { default as ProductTable } from './ProductTable';
 export { default as ServiceCard } from './ServiceCard';
 export { default as ServiceList } from './ServiceList';
 export { default as Technician } from './Technician';
