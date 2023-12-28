@@ -4,14 +4,21 @@ import { useCallback, useMemo, useState } from 'react';
 import { Flex, Box, Heading, useDisclosure } from '@chakra-ui/react';
 
 // Constants
-import { SERVICES, PRODUCTS } from '@/__mocks__';
+import { SERVICES, PRODUCTS, CATEGORIES } from '@/__mocks__';
 import { DEFAULT_PRODUCT_FILTER } from '@/constants';
 
 // Types
 import { Product, STATUS, Filter } from '@/interfaces';
 
 // Components
-import { ProductStatistics, ServiceList, Table, Technician, StatusLabel } from '@/components';
+import {
+  Categories,
+  ProductStatistics,
+  ServiceList,
+  Table,
+  Technician,
+  StatusLabel,
+} from '@/components';
 
 const Page = () => {
   const [productEdit, setProductEdit] = useState<Product>();
@@ -150,6 +157,7 @@ const Page = () => {
         >
           <Heading>About Services</Heading>
           <ServiceList list={SERVICES} />
+          <Categories list={CATEGORIES} />
         </Flex>
         <Box
           w={{
