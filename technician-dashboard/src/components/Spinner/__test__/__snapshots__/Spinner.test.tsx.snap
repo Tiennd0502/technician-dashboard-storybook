@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner test cases should render correctly 1`] = `
+<div>
+  <div
+    class="css-1n2mv2k"
+  >
+    <div
+      class="chakra-spinner css-wv6noy"
+    >
+      <span
+        class="css-8b45rq"
+      >
+        Loading...
+      </span>
+    </div>
+  </div>
+</div>
+`;
