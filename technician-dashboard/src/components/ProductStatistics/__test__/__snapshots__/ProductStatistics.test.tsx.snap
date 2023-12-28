@@ -25,7 +25,7 @@ exports[`ProductStatistics test cases should render correctly 1`] = `
       <img
         alt="Total product"
         class="chakra-image css-1jonlwm"
-        src="total-product.png"
+        src="https://i.ibb.co/N7qhyVF/total-product.png"
       />
     </div>
     <div

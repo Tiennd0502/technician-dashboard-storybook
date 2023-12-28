@@ -1,6 +1,12 @@
 import { Box, Heading, Text, Image } from '@chakra-ui/react';
 
-const Technician = () => (
+import { TECHNICIAN_URL } from '@/constants';
+
+interface TechnicianProps {
+  src?: string;
+}
+
+const Technician = ({ src = TECHNICIAN_URL }: TechnicianProps) => (
   <Box p='7' borderWidth='1px' borderColor='border.primary' borderRadius='md' height='100%'>
     <Heading variant='headingXl'>Add Technicians</Heading>
     <Text as='p' variant='textXxs'>
@@ -10,7 +16,7 @@ const Technician = () => (
       </Text>
       &amp; send the magic link to technicians
     </Text>
-    <Image src='technician.png' alt='Technicians' m='auto' />
+    <Image src={src} alt='Technicians' m='auto' />
   </Box>
 );
 
