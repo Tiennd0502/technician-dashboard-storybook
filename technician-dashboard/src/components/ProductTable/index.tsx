@@ -25,7 +25,7 @@ const ProductTable = () => {
     onClose: onCloseConfirmModal,
   } = useDisclosure();
 
-  const { data: products = [] } = useFetchProducts(DEFAULT_PRODUCT_FILTER);
+  const { data: products = [] } = useFetchProducts(productFilter);
 
   const handleSortProduct = useCallback((value: Filter) => {
     setProductFilter((prev: Filter) => ({
