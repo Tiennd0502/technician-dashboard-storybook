@@ -13,6 +13,7 @@ export { default as ServiceList } from './ServiceList';
 export { default as Technician } from './Technician';
 export { default as ProductStatistics } from './ProductStatistics';
 export { default as Dropdown } from './Dropdown';
+export { default as Spinner } from './Spinner';
 export { default as Header } from './Header';
 export { default as Sidebar } from './Sidebar';
 export { default as Layout } from './Layout';

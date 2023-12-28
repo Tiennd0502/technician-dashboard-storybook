@@ -85,7 +85,7 @@ exports[`Sidebar test cases should render correctly 1`] = `
         class="css-16k9dcn"
       >
         <a
-          class="chakra-link css-10wiyls"
+          class="css-1jp4mxh"
           href="#"
         >
           <svg
@@ -119,8 +119,8 @@ exports[`Sidebar test cases should render correctly 1`] = `
         class="css-16k9dcn"
       >
         <a
-          class="chakra-link css-10wiyls"
-          href="#"
+          class="css-1jp4mxh"
+          href="/product-and-services"
         >
           <svg
             fill="none"
@@ -153,8 +153,8 @@ exports[`Sidebar test cases should render correctly 1`] = `
         class="css-16k9dcn"
       >
         <a
-          class="chakra-link css-10wiyls"
-          href="/technicians"
+          class="css-1jp4mxh"
+          href="#"
         >
           <svg
             fill="none"
@@ -191,7 +191,7 @@ exports[`Sidebar test cases should render correctly 1`] = `
         class="css-16k9dcn"
       >
         <a
-          class="chakra-link css-10wiyls"
+          class="css-1jp4mxh"
           href="#"
         >
           <svg
@@ -286,7 +286,7 @@ exports[`Sidebar test cases should render correctly 1`] = `
         class="css-16k9dcn"
       >
         <a
-          class="chakra-link css-10wiyls"
+          class="css-1jp4mxh"
           href="#"
         >
           <svg
@@ -342,7 +342,7 @@ exports[`Sidebar test cases should render correctly 1`] = `
         class="css-16k9dcn"
       >
         <a
-          class="chakra-link css-10wiyls"
+          class="css-1jp4mxh"
           href="#"
         >
           <svg
@@ -424,7 +424,7 @@ exports[`Sidebar test cases should render correctly 1`] = `
         class="css-j37wja"
       >
         <a
-          class="chakra-link css-10wiyls"
+          class="css-1jp4mxh"
           href="#"
         >
           <svg

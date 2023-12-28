@@ -25,7 +25,7 @@ const ProductTable = () => {
     onClose: onCloseConfirmModal,
   } = useDisclosure();
 
-  const { data: products = [] } = useFetchProducts(productFilter);
+  const { data: products = [], isLoading } = useFetchProducts(productFilter);
 
   const handleSortProduct = useCallback((value: Filter) => {
     setProductFilter((prev: Filter) => ({
@@ -114,6 +114,7 @@ const ProductTable = () => {
   return (
     <Box>
       <Table
+        isLoading={isLoading}
         title='Products listing'
         filter={productFilter}
         columns={productHeaderColumn}
