@@ -18,13 +18,13 @@ export const MENU_ITEM_LIST = [
     id: '2',
     leftIcon: DashboardIcon,
     label: 'Product & services',
-    href: '#',
+    href: '/product-and-services',
   },
   {
     id: '3',
     leftIcon: TechnicianIcon,
     label: 'Technicians',
-    href: '/technicians',
+    href: '#',
   },
   {
     id: '4',
