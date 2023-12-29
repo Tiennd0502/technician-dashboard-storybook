@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination test cases should render correctly 1`] = `
+<div>
+  <div
+    class="css-16kx4g3"
+    role="list"
+  >
+    <button
+      class="chakra-button css-17rlipp"
+      disabled=""
+      type="button"
+    >
+      <svg
+        class="chakra-icon css-14bgo1y"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+    <button
+      class="chakra-button css-17rlipp"
+      type="button"
+    >
+      1
+    </button>
+    <button
+      class="chakra-button css-17rlipp"
+      type="button"
+    >
+      2
+    </button>
+    <button
+      class="chakra-button css-17rlipp"
+      type="button"
+    >
+      3
+    </button>
+    <button
+      class="chakra-button css-17rlipp"
+      type="button"
+    >
+      4
+    </button>
+    <button
+      class="chakra-button css-17rlipp"
+      type="button"
+    >
+      5
+    </button>
+    <button
+      class="chakra-button css-17rlipp"
+      disabled=""
+      type="button"
+    >
+      ...
+    </button>
+    <button
+      class="chakra-button css-17rlipp"
+      type="button"
+    >
+      10
+    </button>
+    <button
+      class="chakra-button css-17rlipp"
+      type="button"
+    >
+      <svg
+        class="chakra-icon css-14bgo1y"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
