@@ -27,6 +27,18 @@ const ProductTable = () => {
 
   const { data: products = [], isLoading } = useFetchProducts(productFilter);
 
+  // TODO: Config api return total pages
+  const { data: productAll = [] } = useFetchProducts({
+    name: productFilter.name || '',
+    sortBy: productFilter.sortBy,
+    order: productFilter.order,
+  });
+
+  const totalPage = useMemo(
+    () => Math.ceil(productAll.length / +DEFAULT_PRODUCT_FILTER.limit),
+    [productAll],
+  );
+
   const handleSortProduct = useCallback((value: Filter) => {
     setProductFilter((prev: Filter) => ({
       ...prev,
@@ -40,6 +52,7 @@ const ProductTable = () => {
     setProductFilter((prev: Filter) => ({
       ...prev,
       name: value,
+      page: '1',
     }));
   }, []);
 
@@ -50,7 +63,12 @@ const ProductTable = () => {
     [onOpenConfirmModal],
   );
 
-  const handleChangePage = useCallback((page: number) => {}, []);
+  const handleChangePage = useCallback((page: number) => {
+    setProductFilter((prev: Filter) => ({
+      ...prev,
+      page: page.toString(),
+    }));
+  }, []);
 
   const productHeaderColumn = useMemo(() => {
     const customViewStatus = (value: string | number | boolean) => (
@@ -137,7 +155,11 @@ const ProductTable = () => {
         onDelete={handleOpenConfirmModal}
       />
 
-      <Pagination onChange={handleChangePage} total={10} page={1} />
+      <Pagination
+        onChange={handleChangePage}
+        total={totalPage}
+        page={+(productFilter?.page || 1)}
+      />
     </VStack>
   );
 };
