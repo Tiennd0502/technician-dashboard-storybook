@@ -16,7 +16,6 @@ type Story = StoryObj<typeof Table>;
 
 export const Default: Story = {
   args: {
-    title: 'Products listing',
     filter: DEFAULT_PRODUCT_FILTER,
     columns: PRODUCT_HEADER_COLUMNS,
     data: PRODUCTS,

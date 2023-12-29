@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useCallback, useMemo, useState } from 'react';
-import { Box, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, VStack, useDisclosure } from '@chakra-ui/react';
 
 // Types
 import { Filter, STATUS, TableData } from '@/interfaces';
@@ -10,7 +10,7 @@ import { Filter, STATUS, TableData } from '@/interfaces';
 import { DEFAULT_PRODUCT_FILTER } from '@/constants';
 
 // Components
-import { StatusLabel, Table } from '..';
+import { FilterIcon, Pagination, SearchBox, StatusLabel, Table } from '..';
 
 // Hooks
 import { useFetchProducts } from '@/hooks';
@@ -49,6 +49,8 @@ const ProductTable = () => {
     },
     [onOpenConfirmModal],
   );
+
+  const handleChangePage = useCallback((page: number) => {}, []);
 
   const productHeaderColumn = useMemo(() => {
     const customViewStatus = (value: string | number | boolean) => (
@@ -112,19 +114,31 @@ const ProductTable = () => {
   }, [handleSortProduct]);
 
   return (
-    <Box>
+    <VStack spacing={7} p='7' borderWidth='1px' borderRadius='md' borderColor='primary' h='100%'>
+      <Flex justifyContent='space-between' alignItems='center' w='full'>
+        <Heading variant='headingLg' mr='auto'>
+          Products listing
+        </Heading>
+        <Box minW='200px' ml='auto' mr='4'>
+          <SearchBox onSearch={handleSearchProduct} />
+        </Box>
+        <Button as={Flex} gap='4' variant='outline' mr='0'>
+          Filter <FilterIcon />
+        </Button>
+        <Button ml='4'>Add new</Button>
+      </Flex>
+
       <Table
         isLoading={isLoading}
-        title='Products listing'
         filter={productFilter}
         columns={productHeaderColumn}
         data={products as unknown as TableData[]}
-        onAdd={onOpenForm}
         onEdit={handleClickEditProduct}
         onDelete={handleOpenConfirmModal}
-        onSearch={handleSearchProduct}
       />
-    </Box>
+
+      <Pagination onChange={handleChangePage} total={10} page={1} />
+    </VStack>
   );
 };
 

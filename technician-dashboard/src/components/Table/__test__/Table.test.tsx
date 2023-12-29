@@ -20,7 +20,6 @@ describe('Table test cases', () => {
   jest.spyOn(mediaQueryHooks, 'useMediaQuery').mockImplementationOnce(() => [true]);
 
   const props = {
-    title: 'Products listing',
     filter: DEFAULT_PRODUCT_FILTER,
     columns: PRODUCT_HEADER_COLUMNS,
     data: PRODUCTS,
@@ -39,9 +38,7 @@ describe('Table test cases', () => {
   });
 
   test('Should render empty header elements', () => {
-    const { getByRole } = render(
-      <Table data={[]} columns={[]} filter={DEFAULT_PRODUCT_FILTER} title='Products listing' />,
-    );
+    const { getByRole } = render(<Table data={[]} columns={[]} filter={DEFAULT_PRODUCT_FILTER} />);
     const header = getByRole('list');
 
     expect(header.childNodes).toHaveLength(0);
