@@ -12,6 +12,7 @@ export { default as ServiceCard } from './ServiceCard';
 export { default as ServiceList } from './ServiceList';
 export { default as Technician } from './Technician';
 export { default as ProductStatistics } from './ProductStatistics';
+export { default as ProductForm } from './ProductForm';
 export { default as Dropdown } from './Dropdown';
 export { default as Spinner } from './Spinner';
 export { default as Pagination } from './Pagination';

@@ -1,6 +1,6 @@
-export const LOGO_URL = './technician.svg';
+export const LOGO_URL = '/technician.svg';
 
-export const AVATAR_DEFAULT = './empty-avatar.svg';
+export const AVATAR_DEFAULT = '/empty-avatar.svg';
 
 export const PRODUCT_STATISTICS_URL = 'https://i.ibb.co/N7qhyVF/total-product.png';
 
