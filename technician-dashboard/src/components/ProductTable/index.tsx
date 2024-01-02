@@ -12,21 +12,24 @@ import { Filter, STATUS, TableData } from '@/interfaces';
 import { DEFAULT_PRODUCT_FILTER, ROUTES } from '@/constants';
 
 // Components
-import { FilterIcon, Pagination, SearchBox, StatusLabel, Table } from '..';
+import { ConfirmModal, FilterIcon, Pagination, SearchBox, StatusLabel, Table } from '..';
 
 // Hooks
-import { useFetchProducts } from '@/hooks';
+import { useFetchProducts, useProduct } from '@/hooks';
 
 const ProductTable = () => {
   const router = useRouter();
   const [productFilter, setProductFilter] = useState<Filter>(DEFAULT_PRODUCT_FILTER);
+  const [productDelete, setProductDelete] = useState<string>('');
 
-  const { isOpen: isOpenForm, onOpen: onOpenForm, onClose: onCloseForm } = useDisclosure();
   const {
     isOpen: isOpenConfirmModal,
     onOpen: onOpenConfirmModal,
     onClose: onCloseConfirmModal,
   } = useDisclosure();
+  const {
+    deleteProduct: { mutate: deleteProduct, isPending: isDeleting },
+  } = useProduct();
 
   const { data: products = [], isLoading } = useFetchProducts(productFilter);
 
@@ -62,8 +65,20 @@ const ProductTable = () => {
     }));
   }, []);
 
+  const handleCloseConfirmModal = useCallback(() => {
+    setProductDelete('');
+    onCloseConfirmModal();
+  }, [onCloseConfirmModal]);
+
+  const handleDeleteProduct = useCallback(() => {
+    deleteProduct(productDelete, {
+      onSettled: handleCloseConfirmModal,
+    });
+  }, [deleteProduct, handleCloseConfirmModal, productDelete]);
+
   const handleOpenConfirmModal = useCallback(
     (id: string) => {
+      setProductDelete(id);
       onOpenConfirmModal();
     },
     [onOpenConfirmModal],
@@ -139,6 +154,16 @@ const ProductTable = () => {
 
   return (
     <VStack spacing={7} p='7' borderWidth='1px' borderRadius='md' borderColor='primary' h='100%'>
+      {isOpenConfirmModal && (
+        <ConfirmModal
+          title='Delete Product'
+          description='Are you sure you want to delete this product?'
+          isOpen={isOpenConfirmModal}
+          isSubmitting={isDeleting}
+          onSubmit={handleDeleteProduct}
+          onClose={handleCloseConfirmModal}
+        />
+      )}
       <Flex justifyContent='space-between' alignItems='center' w='full'>
         <Heading variant='headingLg' mr='auto'>
           Products listing

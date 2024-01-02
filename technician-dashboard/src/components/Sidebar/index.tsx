@@ -43,7 +43,7 @@ const Sidebar = ({ listItem }: SidebarPros) => {
               _hover={{
                 background: 'background.component.tertiary',
               }}
-              {...(pathname === href && {
+              {...(pathname?.startsWith(href) && {
                 background: 'background.component.tertiary',
               })}
               {...(index === listItem.length - 1 && {
