@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { useArgs } from '@storybook/preview-api';
 
 import ConfirmModal from '.';
 
@@ -11,22 +12,17 @@ const meta: Meta<typeof ConfirmModal> = {
 export default meta;
 type Story = StoryObj<typeof ConfirmModal>;
 
-export const Hide: Story = {
+export const Default: Story = {
   args: {
     isOpen: false,
     title: 'Confirm modal',
     description: 'Are you sure to delete it?',
-    onClose: () => null,
-    onSubmit: () => null,
   },
-};
+  render: function Render(props) {
+    const [{ isOpen }, updateArgs] = useArgs();
 
-export const Show: Story = {
-  args: {
-    isOpen: true,
-    title: 'Confirm modal',
-    description: 'Are you sure to delete it?',
-    onClose: () => null,
-    onSubmit: () => null,
+    const handleClose = () => updateArgs({ isOpen: !isOpen });
+
+    return <ConfirmModal {...props} isOpen={isOpen} onClose={handleClose} onSubmit={handleClose} />;
   },
 };
