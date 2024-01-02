@@ -2,12 +2,14 @@
 
 import React, { useCallback, useMemo, useState } from 'react';
 import { Box, Button, Flex, Heading, VStack, useDisclosure } from '@chakra-ui/react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 // Types
 import { Filter, STATUS, TableData } from '@/interfaces';
 
 // Constants
-import { DEFAULT_PRODUCT_FILTER } from '@/constants';
+import { DEFAULT_PRODUCT_FILTER, ROUTES } from '@/constants';
 
 // Components
 import { FilterIcon, Pagination, SearchBox, StatusLabel, Table } from '..';
@@ -16,6 +18,7 @@ import { FilterIcon, Pagination, SearchBox, StatusLabel, Table } from '..';
 import { useFetchProducts } from '@/hooks';
 
 const ProductTable = () => {
+  const router = useRouter();
   const [productFilter, setProductFilter] = useState<Filter>(DEFAULT_PRODUCT_FILTER);
 
   const { isOpen: isOpenForm, onOpen: onOpenForm, onClose: onCloseForm } = useDisclosure();
@@ -46,7 +49,10 @@ const ProductTable = () => {
     }));
   }, []);
 
-  const handleClickEditProduct = useCallback((id: string) => {}, []);
+  const handleClickEditProduct = useCallback(
+    (id: string) => router.push(`${ROUTES.PRODUCT_AND_SERVICES}/${id}/edit`),
+    [router],
+  );
 
   const handleSearchProduct = useCallback((value: string) => {
     setProductFilter((prev: Filter) => ({
@@ -143,7 +149,9 @@ const ProductTable = () => {
         <Button as={Flex} gap='4' variant='outline' mr='0'>
           Filter <FilterIcon />
         </Button>
-        <Button ml='4'>Add new</Button>
+        <Button as={Link} ml='4' href={`${ROUTES.PRODUCT_AND_SERVICES}/create`}>
+          Add new
+        </Button>
       </Flex>
 
       <Table

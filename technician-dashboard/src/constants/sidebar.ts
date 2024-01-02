@@ -6,6 +6,7 @@ import {
   FeedbackIcon,
   SettingIcon,
 } from '@/components';
+import { ROUTES } from './routes';
 
 export const MENU_ITEM_LIST = [
   {
@@ -18,7 +19,7 @@ export const MENU_ITEM_LIST = [
     id: '2',
     leftIcon: DashboardIcon,
     label: 'Product & services',
-    href: '/product-and-services',
+    href: ROUTES.PRODUCT_AND_SERVICES,
   },
   {
     id: '3',

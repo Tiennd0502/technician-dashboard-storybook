@@ -13,6 +13,12 @@ export const useFetchProducts = (filter: Filter) =>
       APIs.get<Product[]>(`${API_ROUTES.PRODUCT}${filter ? generateQuery(filter) : ''}`),
   });
 
+export const useFetchProduct = (id: string) =>
+  useQuery({
+    queryKey: [`products/${id}`],
+    queryFn: () => APIs.get<Product>(`${API_ROUTES.PRODUCT}${id}`),
+  });
+
 export const useProduct = () => {
   const queryClient = useQueryClient();
 
