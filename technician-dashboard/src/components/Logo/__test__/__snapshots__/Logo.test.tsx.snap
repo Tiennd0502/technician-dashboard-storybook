@@ -8,7 +8,7 @@ exports[`should render correctly 1`] = `
     <img
       alt="Technician"
       class="chakra-image css-0"
-      src="./technician.svg"
+      src="/technician.svg"
     />
     <div
       class="css-0"
