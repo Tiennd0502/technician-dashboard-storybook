@@ -4,6 +4,7 @@ exports[`ServiceCard test cases should render correctly 1`] = `
 <div>
   <a
     class="chakra-link css-1r22un5"
+    href="#"
   >
     <img
       alt="Carpenter"

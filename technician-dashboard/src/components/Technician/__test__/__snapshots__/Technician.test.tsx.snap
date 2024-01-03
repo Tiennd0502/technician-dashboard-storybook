@@ -23,8 +23,14 @@ exports[`Technician test cases should render correctly 1`] = `
     </p>
     <img
       alt="Technicians"
-      class="chakra-image css-42igfv"
-      src="https://i.ibb.co/jJLDfLC/technician.png"
+      data-nimg="1"
+      decoding="async"
+      height="300"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=750&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=750&q=75 2x"
+      style="color: transparent; width: 100%; height: auto;"
+      width="326"
     />
   </div>
 </div>

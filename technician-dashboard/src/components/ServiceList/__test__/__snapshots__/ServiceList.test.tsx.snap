@@ -8,6 +8,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
   >
     <a
       class="chakra-link css-1r22un5"
+      href="#"
     >
       <img
         alt="Carpenter"
@@ -35,6 +36,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
     </a>
     <a
       class="chakra-link css-1r22un5"
+      href="#"
     >
       <img
         alt="Ac Service & repair"
@@ -62,6 +64,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
     </a>
     <a
       class="chakra-link css-1r22un5"
+      href="#"
     >
       <img
         alt="Kitchecn Deep Cleaning"
@@ -89,6 +92,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
     </a>
     <a
       class="chakra-link css-1r22un5"
+      href="#"
     >
       <img
         alt="Electrician"

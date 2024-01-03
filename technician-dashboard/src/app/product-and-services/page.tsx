@@ -1,4 +1,5 @@
 import { Flex, Box } from '@chakra-ui/react';
+import { Metadata } from 'next';
 
 // Components
 import { ProductStatistics, Technician, ProductTable, ServiceSection } from '@/components';
@@ -44,5 +45,10 @@ const Page = () => (
     </Flex>
   </Box>
 );
+
+export const metadata: Metadata = {
+  title: 'Product & Services',
+  description: 'The product and services in technical dashboard',
+};
 
 export default Page;
