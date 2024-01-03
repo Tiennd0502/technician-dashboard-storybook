@@ -1,4 +1,5 @@
-import { Flex, Heading, Image, Text, Button } from '@chakra-ui/react';
+import { Flex, Heading, Text, Button } from '@chakra-ui/react';
+import Image from 'next/image';
 
 import { PRODUCT_STATISTICS_URL } from '@/constants';
 import { StatusLabel } from '..';
@@ -25,7 +26,16 @@ const ProductStatistics = ({ src = PRODUCT_STATISTICS_URL }: ProductStatisticsPr
       <Text variant='text3Xl'>350</Text>
     </Flex>
     <Flex justifyContent='center' alignItems='center' width='100%'>
-      <Image src={src} alt='Total product' maxW='min-content' />
+      <Image
+        src={src}
+        alt='Total product'
+        style={{
+          width: '100%',
+          height: 'auto',
+        }}
+        width={313}
+        height={181}
+      />
     </Flex>
     <Flex justifyContent='space-between'>
       <Button variant='outline'>
