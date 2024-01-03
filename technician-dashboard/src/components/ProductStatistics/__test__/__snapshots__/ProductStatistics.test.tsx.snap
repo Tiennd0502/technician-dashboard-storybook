@@ -24,8 +24,14 @@ exports[`ProductStatistics test cases should render correctly 1`] = `
     >
       <img
         alt="Total product"
-        class="chakra-image css-1jonlwm"
-        src="https://i.ibb.co/N7qhyVF/total-product.png"
+        data-nimg="1"
+        decoding="async"
+        height="181"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=640&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=640&q=75 2x"
+        style="color: transparent; width: 100%; height: auto;"
+        width="313"
       />
     </div>
     <div

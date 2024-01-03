@@ -21,7 +21,7 @@ const Categories = ({ list }: CategoriesProps) => {
   return (
     <Flex gap='5' role='list'>
       {list.map(({ id, image, label }) => (
-        <Link key={id} pos='relative' {...getLinkStyles(image)}>
+        <Link key={id} pos='relative' href='#' {...getLinkStyles(image)}>
           <Text
             color='text.tertiary'
             variant='textXsm'

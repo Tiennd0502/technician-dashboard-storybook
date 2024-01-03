@@ -21,6 +21,7 @@ const ServiceCard = ({
     pos='relative'
     minH='165px'
     w='100%'
+    href='#'
     borderRadius='md'
     overflow='hidden'
     _hover={{
