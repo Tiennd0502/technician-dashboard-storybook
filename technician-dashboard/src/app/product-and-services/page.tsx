@@ -1,35 +1,17 @@
-import { Flex, Box, Heading } from '@chakra-ui/react';
-
-// Constants
-import { SERVICES, CATEGORIES } from '@/__mocks__';
+import { Flex, Box } from '@chakra-ui/react';
 
 // Components
-import { Categories, ProductStatistics, ServiceList, Technician, ProductTable } from '@/components';
+import { ProductStatistics, Technician, ProductTable, ServiceSection } from '@/components';
 
 const Page = () => (
   <Box pr='5'>
     <Flex gap='5' flexWrap='wrap'>
-      <Flex
-        w={{
+      <ServiceSection
+        width={{
           base: '100%',
           xl: 'calc(67% - 10px)',
         }}
-        flexDirection='column'
-        justifyContent='space-between'
-        gap='5'
-        borderWidth='1px'
-        borderColor='border.primary'
-        borderRadius='md'
-        p='7'
-        order={{
-          md: 1,
-          xl: 1,
-        }}
-      >
-        <Heading>About Services</Heading>
-        <ServiceList list={SERVICES} />
-        <Categories list={CATEGORIES} />
-      </Flex>
+      />
       <Box
         w={{
           sm: '100%',

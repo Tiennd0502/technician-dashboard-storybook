@@ -10,6 +10,7 @@ export { default as Table } from './Table';
 export { default as ProductTable } from './ProductTable';
 export { default as ServiceCard } from './ServiceCard';
 export { default as ServiceList } from './ServiceList';
+export { default as ServiceSection } from './ServiceSection';
 export { default as Technician } from './Technician';
 export { default as ProductStatistics } from './ProductStatistics';
 export { default as ProductForm } from './ProductForm';
