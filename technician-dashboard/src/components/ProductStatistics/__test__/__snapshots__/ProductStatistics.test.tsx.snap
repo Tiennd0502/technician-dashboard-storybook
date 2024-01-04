@@ -20,23 +20,55 @@ exports[`ProductStatistics test cases should render correctly 1`] = `
       </p>
     </div>
     <div
-      class="css-1pxgmwj"
+      class="css-1thka4w"
     >
-      <img
-        alt="Total product"
-        data-nimg="1"
-        decoding="async"
-        height="181"
-        loading="lazy"
-        sizes="100vw"
-        src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=3840&q=75"
-        srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFnrV3t6%2Ftotal-product.webp&w=3840&q=75 3840w"
-        style="color: transparent; width: 100%; height: auto; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
-        width="313"
-      />
+      <div
+        class="css-jr1uaz"
+      >
+        <p
+          class="chakra-text css-0"
+        >
+          285
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Activated
+        </p>
+      </div>
+      <div
+        class="css-1hmean7"
+      >
+        <img
+          alt="Total product"
+          data-nimg="1"
+          decoding="async"
+          height="180"
+          loading="lazy"
+          sizes="100vw"
+          src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FCH5rb0L%2Ftotal-product.webp&w=3840&q=75"
+          srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FCH5rb0L%2Ftotal-product.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FCH5rb0L%2Ftotal-product.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FCH5rb0L%2Ftotal-product.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FCH5rb0L%2Ftotal-product.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FCH5rb0L%2Ftotal-product.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FCH5rb0L%2Ftotal-product.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FCH5rb0L%2Ftotal-product.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FCH5rb0L%2Ftotal-product.webp&w=3840&q=75 3840w"
+          style="color: transparent; max-width: 100%; height: auto; width: 100%; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          width="200"
+        />
+      </div>
+      <div
+        class="css-1hj06vn"
+      >
+        <p
+          class="chakra-text css-0"
+        >
+          65
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Deactivated
+        </p>
+      </div>
     </div>
     <div
-      class="css-gg4vpm"
+      class="css-spe7u7"
     >
       <button
         class="chakra-button css-4xx2wk"

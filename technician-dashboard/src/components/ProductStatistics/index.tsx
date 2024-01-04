@@ -1,4 +1,4 @@
-import { Flex, Heading, Text, Button } from '@chakra-ui/react';
+import { Flex, Heading, Text, Button, Box } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import { PRODUCT_STATISTICS_URL } from '@/constants';
@@ -25,18 +25,31 @@ const ProductStatistics = ({ src = PRODUCT_STATISTICS_URL }: ProductStatisticsPr
       </Heading>
       <Text variant='text3Xl'>350</Text>
     </Flex>
-    <Flex justifyContent='center' alignItems='center' width='100%'>
-      <Image
-        src={src}
-        alt='Total product'
-        width={313}
-        height={181}
-        layout='responsive'
-        blurDataURL={src}
-        placeholder='blur'
-      />
+    <Flex justifyContent='center' w='full' gap='2' mt='4'>
+      <Box mt='auto' mb={{ base: '5', md: '0', lg: '7' }}>
+        <Text>285</Text>
+        <Text variant='textXs'>Activated</Text>
+      </Box>
+      <Box alignSelf='center' flexBasis={{ base: '200px', md: '320px' }}>
+        <Image
+          src={src}
+          alt='Total product'
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
+          width={200}
+          height={180}
+          blurDataURL={src}
+          placeholder='blur'
+        />
+      </Box>
+      <Box alignSelf='start' mb='4'>
+        <Text>65</Text>
+        <Text variant='textXs'>Deactivated</Text>
+      </Box>
     </Flex>
-    <Flex justifyContent='space-between'>
+    <Flex justifyContent='space-between' mt='4'>
       <Button variant='outline'>
         <StatusLabel value={STATUS.Activated} />
       </Button>
