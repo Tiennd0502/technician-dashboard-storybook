@@ -10,8 +10,8 @@ const config: Config = {
   moduleDirectories: ['node_modules'],
   moduleNameMapper: {
     '.+\\.(png|jpg)$': 'identity-obj-proxy',
-    '^@root(.*)$': '<rootDir>/src$1',
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@root(.*)$': '<rootDir>/app$1',
+    '^@/(.*)$': '<rootDir>/app/$1',
   },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
