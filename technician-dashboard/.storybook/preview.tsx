@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
-import { ChakraProvider } from '../src/providers';
+import { ChakraProvider } from '../app/lib/providers';
 
 const preview: Preview = {
   parameters: {

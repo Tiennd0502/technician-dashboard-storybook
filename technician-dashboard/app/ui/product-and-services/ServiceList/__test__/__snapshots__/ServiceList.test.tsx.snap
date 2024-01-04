@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceList test cases should render correctly 1`] = `
+<div>
+  <div
+    class="css-1j52cd2"
+    role="list"
+  >
+    <a
+      class="chakra-link css-qwh07e"
+      href="#"
+    >
+      <div
+        class="css-1g4yje1"
+        justify-content="flex-end"
+      >
+        <div
+          class="css-17xejub"
+        />
+        <p
+          class="chakra-text css-od0eia"
+        >
+          Carpenter
+        </p>
+        <p
+          class="chakra-text css-18bew60"
+        >
+          €45
+        </p>
+      </div>
+    </a>
+    <a
+      class="chakra-link css-17733pz"
+      href="#"
+    >
+      <div
+        class="css-1g4yje1"
+        justify-content="flex-end"
+      >
+        <div
+          class="css-17xejub"
+        />
+        <p
+          class="chakra-text css-od0eia"
+        >
+          Ac Service & repair
+        </p>
+        <p
+          class="chakra-text css-18bew60"
+        >
+          €25
+        </p>
+      </div>
+    </a>
+    <a
+      class="chakra-link css-tu7nyg"
+      href="#"
+    >
+      <div
+        class="css-1g4yje1"
+        justify-content="flex-end"
+      >
+        <div
+          class="css-17xejub"
+        />
+        <p
+          class="chakra-text css-od0eia"
+        >
+          Kitchecn Deep Cleaning
+        </p>
+        <p
+          class="chakra-text css-18bew60"
+        >
+          €30
+        </p>
+      </div>
+    </a>
+    <a
+      class="chakra-link css-tjcrj0"
+      href="#"
+    >
+      <div
+        class="css-1g4yje1"
+        justify-content="flex-end"
+      >
+        <div
+          class="css-17xejub"
+        />
+        <p
+          class="chakra-text css-od0eia"
+        >
+          Electrician
+        </p>
+        <p
+          class="chakra-text css-18bew60"
+        >
+          €50
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
+`;
