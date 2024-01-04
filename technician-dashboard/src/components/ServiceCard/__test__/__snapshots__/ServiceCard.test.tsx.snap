@@ -6,11 +6,21 @@ exports[`ServiceCard test cases should render correctly 1`] = `
     class="chakra-link css-1r22un5"
     href="#"
   >
-    <img
-      alt="Carpenter"
-      class="chakra-image css-1fayruo"
-      src="https://i.ibb.co/7WfPDMJ/service01.png"
-    />
+    <div
+      class="css-ua73v8"
+    >
+      <img
+        alt="Carpenter"
+        data-nimg="1"
+        decoding="async"
+        height="165"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F7WfPDMJ%2Fservice01.png&w=384&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F7WfPDMJ%2Fservice01.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F7WfPDMJ%2Fservice01.png&w=384&q=75 2x"
+        style="color: transparent; width: 100%; height: 100%; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+        width="161"
+      />
+    </div>
     <div
       class="css-1g4yje1"
       justify-content="flex-end"

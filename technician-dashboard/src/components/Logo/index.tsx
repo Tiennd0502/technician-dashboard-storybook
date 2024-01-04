@@ -9,7 +9,7 @@ interface LogoProps {
 
 const Logo = ({ src = LOGO_URL }: LogoProps) => (
   <Flex gap='2.5'>
-    <Image src={src} alt='Technician' width={313} height={181} layout='responsive' />
+    <Image src={src} alt='Technician' width={37} height={38} />
     <Box>
       <Text
         width='fit-content'

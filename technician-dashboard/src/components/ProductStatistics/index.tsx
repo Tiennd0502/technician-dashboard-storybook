@@ -32,7 +32,8 @@ const ProductStatistics = ({ src = PRODUCT_STATISTICS_URL }: ProductStatisticsPr
         width={313}
         height={181}
         layout='responsive'
-        loading='lazy'
+        blurDataURL={src}
+        placeholder='blur'
       />
     </Flex>
     <Flex justifyContent='space-between'>
