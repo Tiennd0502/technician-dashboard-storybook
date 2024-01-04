@@ -1,5 +1,6 @@
 import { memo } from 'react';
-import { Link, Image, Spacer, Text, Flex } from '@chakra-ui/react';
+import { Link, Spacer, Text, Flex, Box } from '@chakra-ui/react';
+import Image from 'next/image';
 
 // Constants
 import { TRUNCATE_STYLE } from '@/constants';
@@ -28,15 +29,21 @@ const ServiceCard = ({
       opacity: '0.7',
     }}
   >
-    <Image
-      src={image}
-      alt={name}
-      objectFit='cover'
-      pos='absolute'
-      zIndex='-1'
-      w='100%'
-      height='100%'
-    />
+    <Box w='full' pos='absolute' zIndex='-1'>
+      <Image
+        src={image}
+        alt={name}
+        objectFit='cover'
+        style={{
+          width: '100%',
+          height: '100%',
+        }}
+        width='161'
+        height='165'
+        blurDataURL={image}
+        placeholder='blur'
+      />
+    </Box>
     <Flex flexDirection='column' justify-content='flex-end' h='100%'>
       <Spacer />
       <Text

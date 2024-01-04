@@ -9,11 +9,11 @@ exports[`should render correctly 1`] = `
       alt="Technician"
       data-nimg="1"
       decoding="async"
-      height="181"
+      height="38"
       loading="lazy"
       src="/technician.svg"
-      style="color: transparent; width: 100%; height: auto;"
-      width="313"
+      style="color: transparent;"
+      width="37"
     />
     <div
       class="css-0"

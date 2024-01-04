@@ -23,7 +23,8 @@ const Technician = ({ src = TECHNICIAN_URL }: TechnicianProps) => (
       width={326}
       height={300}
       layout='responsive'
-      loading='lazy'
+      blurDataURL={src}
+      placeholder='blur'
     />
   </Box>
 );
