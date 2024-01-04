@@ -20,12 +20,10 @@ const Technician = ({ src = TECHNICIAN_URL }: TechnicianProps) => (
     <Image
       src={src}
       alt='Technicians'
-      style={{
-        width: '100%',
-        height: 'auto',
-      }}
       width={326}
       height={300}
+      layout='responsive'
+      loading='lazy'
     />
   </Box>
 );
