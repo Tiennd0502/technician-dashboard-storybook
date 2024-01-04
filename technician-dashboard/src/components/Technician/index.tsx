@@ -30,6 +30,7 @@ const Technician = ({ src = TECHNICIAN_URL }: TechnicianProps) => (
         layout='responsive'
         blurDataURL={src}
         placeholder='blur'
+        priority
       />
     </Box>
   </Box>
