@@ -15,7 +15,7 @@ const Page = () => (
       />
       <Box
         w={{
-          sm: '100%',
+          base: '100%',
           md: 'calc(50% - 10px)',
           xl: 'calc(33% - 10px)',
         }}

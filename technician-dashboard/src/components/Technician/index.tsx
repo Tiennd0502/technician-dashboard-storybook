@@ -17,15 +17,21 @@ const Technician = ({ src = TECHNICIAN_URL }: TechnicianProps) => (
       </Text>
       &amp; send the magic link to technicians
     </Text>
-    <Image
-      src={src}
-      alt='Technicians'
-      width={326}
-      height={300}
-      layout='responsive'
-      blurDataURL={src}
-      placeholder='blur'
-    />
+    <Box maxW='500px' m='0 auto'>
+      <Image
+        src={src}
+        alt='Technicians'
+        style={{
+          width: '100%',
+          height: 'auto',
+        }}
+        width={326}
+        height={300}
+        layout='responsive'
+        blurDataURL={src}
+        placeholder='blur'
+      />
+    </Box>
   </Box>
 );
 

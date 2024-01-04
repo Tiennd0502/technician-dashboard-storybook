@@ -7,7 +7,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
     role="list"
   >
     <a
-      class="chakra-link css-1r22un5"
+      class="chakra-link css-1xo1vqh"
       href="#"
     >
       <div
@@ -21,7 +21,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
           loading="lazy"
           src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F7WfPDMJ%2Fservice01.png&w=384&q=75"
           srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F7WfPDMJ%2Fservice01.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F7WfPDMJ%2Fservice01.png&w=384&q=75 2x"
-          style="color: transparent; width: 100%; height: 100%; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          style="color: transparent; width: 100%; min-height: 165px; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
           width="161"
         />
       </div>
@@ -45,7 +45,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
       </div>
     </a>
     <a
-      class="chakra-link css-1r22un5"
+      class="chakra-link css-1xo1vqh"
       href="#"
     >
       <div
@@ -59,7 +59,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
           loading="lazy"
           src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FG069RKZ%2Fservice02.png&w=384&q=75"
           srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FG069RKZ%2Fservice02.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FG069RKZ%2Fservice02.png&w=384&q=75 2x"
-          style="color: transparent; width: 100%; height: 100%; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          style="color: transparent; width: 100%; min-height: 165px; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
           width="161"
         />
       </div>
@@ -83,7 +83,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
       </div>
     </a>
     <a
-      class="chakra-link css-1r22un5"
+      class="chakra-link css-1xo1vqh"
       href="#"
     >
       <div
@@ -97,7 +97,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
           loading="lazy"
           src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fnw3YSHS%2Fservice03.png&w=384&q=75"
           srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fnw3YSHS%2Fservice03.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fnw3YSHS%2Fservice03.png&w=384&q=75 2x"
-          style="color: transparent; width: 100%; height: 100%; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          style="color: transparent; width: 100%; min-height: 165px; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
           width="161"
         />
       </div>
@@ -121,7 +121,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
       </div>
     </a>
     <a
-      class="chakra-link css-1r22un5"
+      class="chakra-link css-1xo1vqh"
       href="#"
     >
       <div
@@ -135,7 +135,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
           loading="lazy"
           src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FCvnw8GY%2Fservice04.png&w=384&q=75"
           srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FCvnw8GY%2Fservice04.png&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FCvnw8GY%2Fservice04.png&w=384&q=75 2x"
-          style="color: transparent; width: 100%; height: 100%; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          style="color: transparent; width: 100%; min-height: 165px; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
           width="161"
         />
       </div>
