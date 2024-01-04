@@ -21,18 +21,22 @@ exports[`Technician test cases should render correctly 1`] = `
       </span>
       & send the magic link to technicians
     </p>
-    <img
-      alt="Technicians"
-      data-nimg="1"
-      decoding="async"
-      height="300"
-      loading="lazy"
-      sizes="100vw"
-      src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=3840&q=75"
-      srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=3840&q=75 3840w"
-      style="color: transparent; width: 100%; height: auto; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
-      width="326"
-    />
+    <div
+      class="css-1ouw2vm"
+    >
+      <img
+        alt="Technicians"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="high"
+        height="300"
+        sizes="100vw"
+        src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=3840&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FqMWPNmx%2Ftechnician.webp&w=3840&q=75 3840w"
+        style="color: transparent; width: 100%; height: auto; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+        width="326"
+      />
+    </div>
   </div>
 </div>
 `;
