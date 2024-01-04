@@ -7,8 +7,13 @@ exports[`should render correctly 1`] = `
   >
     <img
       alt="Technician"
-      class="chakra-image css-0"
+      data-nimg="1"
+      decoding="async"
+      height="181"
+      loading="lazy"
       src="/technician.svg"
+      style="color: transparent; width: 100%; height: auto;"
+      width="313"
     />
     <div
       class="css-0"

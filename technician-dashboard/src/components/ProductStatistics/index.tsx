@@ -29,12 +29,10 @@ const ProductStatistics = ({ src = PRODUCT_STATISTICS_URL }: ProductStatisticsPr
       <Image
         src={src}
         alt='Total product'
-        style={{
-          width: '100%',
-          height: 'auto',
-        }}
         width={313}
         height={181}
+        layout='responsive'
+        loading='lazy'
       />
     </Flex>
     <Flex justifyContent='space-between'>

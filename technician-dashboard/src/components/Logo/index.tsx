@@ -1,4 +1,5 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
+import Image from 'next/image';
 
 import { LOGO_URL } from '@/constants';
 
@@ -8,7 +9,7 @@ interface LogoProps {
 
 const Logo = ({ src = LOGO_URL }: LogoProps) => (
   <Flex gap='2.5'>
-    <Image src={src} alt='Technician' />
+    <Image src={src} alt='Technician' width={313} height={181} layout='responsive' />
     <Box>
       <Text
         width='fit-content'
