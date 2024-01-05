@@ -108,18 +108,18 @@ const Table = ({ filter: { sortBy, order }, columns, data, onEdit, onDelete }: T
                     {customView ? (
                       customView(item[key])
                     ) : isAction ? (
-                      <>
+                      <Flex w='full' justifyContent='flex-end' alignItems='center'>
                         {onEdit && (
-                          <Button px='2' ml='auto' mr='4' onClick={() => onEdit(item.id)}>
+                          <Button size='sm' ml='auto' mr='2' onClick={() => onEdit(item.id)}>
                             Edit{' '}
                           </Button>
                         )}
                         {onDelete && (
-                          <Button variant='outline' mr='2' px='2' onClick={() => onDelete(item.id)}>
+                          <Button size='sm' variant='outline' onClick={() => onDelete(item.id)}>
                             Delete
                           </Button>
                         )}
-                      </>
+                      </Flex>
                     ) : (
                       <Text variant='textSm' {...TRUNCATE_STYLE}>
                         {item[key]}
