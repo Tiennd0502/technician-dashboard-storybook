@@ -15,3 +15,5 @@ export const TRUNCATE_STYLE = {
   overflow: 'hidden',
   whiteSpace: 'nowrap',
 };
+
+export const NO_DATA = 'No data found';
