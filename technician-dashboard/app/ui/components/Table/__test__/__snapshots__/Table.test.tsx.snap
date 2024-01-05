@@ -76,7 +76,7 @@ exports[`Table test cases should render correctly 1`] = `
         class="css-1n3sooa"
       >
         <p
-          class="chakra-text css-0"
+          class="chakra-text css-1rrgtke"
         >
           Actions
         </p>
@@ -111,34 +111,34 @@ exports[`Table test cases should render correctly 1`] = `
           </label>
         </div>
         <div
-          class="css-lsigov"
+          class="css-sspw3w"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Washing machine
           </p>
         </div>
         <div
-          class="css-dq1g6v"
+          class="css-17pip8y"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Hitachi
           </p>
         </div>
         <div
-          class="css-1gyiejn"
+          class="css-ifuqlw"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Repair
           </p>
         </div>
         <div
-          class="css-ug13tv"
+          class="css-1490dfh"
         >
           <div
             class="css-70qvj9"
@@ -156,7 +156,7 @@ exports[`Table test cases should render correctly 1`] = `
           </div>
         </div>
         <div
-          class="css-1e474gu"
+          class="css-4khqpw"
         />
       </div>
     </div>
@@ -189,34 +189,34 @@ exports[`Table test cases should render correctly 1`] = `
           </label>
         </div>
         <div
-          class="css-lsigov"
+          class="css-sspw3w"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Air conditioner
           </p>
         </div>
         <div
-          class="css-dq1g6v"
+          class="css-17pip8y"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             LG
           </p>
         </div>
         <div
-          class="css-1gyiejn"
+          class="css-ifuqlw"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Installation
           </p>
         </div>
         <div
-          class="css-ug13tv"
+          class="css-1490dfh"
         >
           <div
             class="css-70qvj9"
@@ -234,7 +234,7 @@ exports[`Table test cases should render correctly 1`] = `
           </div>
         </div>
         <div
-          class="css-1e474gu"
+          class="css-4khqpw"
         />
       </div>
     </div>
@@ -267,34 +267,34 @@ exports[`Table test cases should render correctly 1`] = `
           </label>
         </div>
         <div
-          class="css-lsigov"
+          class="css-sspw3w"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Smart TV
           </p>
         </div>
         <div
-          class="css-dq1g6v"
+          class="css-17pip8y"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             OnePlus
           </p>
         </div>
         <div
-          class="css-1gyiejn"
+          class="css-ifuqlw"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Uninstallation
           </p>
         </div>
         <div
-          class="css-ug13tv"
+          class="css-1490dfh"
         >
           <div
             class="css-70qvj9"
@@ -312,7 +312,7 @@ exports[`Table test cases should render correctly 1`] = `
           </div>
         </div>
         <div
-          class="css-1e474gu"
+          class="css-4khqpw"
         />
       </div>
     </div>
@@ -345,34 +345,34 @@ exports[`Table test cases should render correctly 1`] = `
           </label>
         </div>
         <div
-          class="css-lsigov"
+          class="css-sspw3w"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Water purifier
           </p>
         </div>
         <div
-          class="css-dq1g6v"
+          class="css-17pip8y"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Kent
           </p>
         </div>
         <div
-          class="css-1gyiejn"
+          class="css-ifuqlw"
         >
           <p
-            class="chakra-text css-0"
+            class="chakra-text css-6pogpz"
           >
             Repair
           </p>
         </div>
         <div
-          class="css-ug13tv"
+          class="css-1490dfh"
         >
           <div
             class="css-70qvj9"
@@ -390,7 +390,7 @@ exports[`Table test cases should render correctly 1`] = `
           </div>
         </div>
         <div
-          class="css-1e474gu"
+          class="css-4khqpw"
         />
       </div>
     </div>

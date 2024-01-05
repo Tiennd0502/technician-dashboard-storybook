@@ -12,7 +12,7 @@ import { Filter, STATUS, TableData } from '@/lib/interfaces';
 import { DEFAULT_PRODUCT_FILTER, ROUTES } from '@/lib/constants';
 
 // Components / icons
-import { ConfirmModal, Pagination, SearchBox, StatusLabel, Table } from '@/ui/components';
+import { ConfirmModal, Pagination, SearchBox, Spinner, StatusLabel, Table } from '@/ui/components';
 import { FilterIcon } from '@/ui/icons';
 
 // Hooks
@@ -180,20 +180,27 @@ const ProductTable = () => {
         </Button>
       </Flex>
 
-      <Table
-        isLoading={isLoading}
-        filter={productFilter}
-        columns={productHeaderColumn}
-        data={products as unknown as TableData[]}
-        onEdit={handleClickEditProduct}
-        onDelete={handleOpenConfirmModal}
-      />
+      {isLoading ? (
+        <Flex minH='388px' alignItems='center'>
+          <Spinner />
+        </Flex>
+      ) : (
+        <>
+          <Table
+            filter={productFilter}
+            columns={productHeaderColumn}
+            data={products as unknown as TableData[]}
+            onEdit={handleClickEditProduct}
+            onDelete={handleOpenConfirmModal}
+          />
 
-      <Pagination
-        onChange={handleChangePage}
-        total={totalPage}
-        page={+(productFilter?.page || 1)}
-      />
+          <Pagination
+            onChange={handleChangePage}
+            total={totalPage}
+            page={+(productFilter?.page || 1)}
+          />
+        </>
+      )}
     </VStack>
   );
 };
