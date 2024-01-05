@@ -1,4 +1,4 @@
-import { forwardRef, memo } from 'react';
+import { ForwardedRef, forwardRef, memo } from 'react';
 import {
   FormControl,
   FormLabel,
@@ -10,29 +10,25 @@ import {
 interface InputProps extends ChakraInputProps {
   error?: string;
   label?: string;
+  ref?: ForwardedRef<HTMLInputElement>;
 }
 
-const Input = forwardRef<HTMLInputElement, InputProps>(function Component(
-  { type = 'text', error, label, ...props },
-  ref,
-) {
-  return (
-    <FormControl isInvalid={!!error}>
-      <FormLabel fontWeight='semiBold'>{label}</FormLabel>
-      <ChakraInput
-        ref={ref}
-        type={type}
-        isInvalid={!!error}
-        transition='all .5s ease'
-        _focusVisible={{
-          outline: 'none',
-        }}
-        {...props}
-      />
+export const Input = ({ type = 'text', error, label, ref, ...props }: InputProps) => (
+  <FormControl isInvalid={!!error}>
+    <FormLabel fontWeight='semiBold'>{label}</FormLabel>
+    <ChakraInput
+      ref={ref}
+      type={type}
+      isInvalid={!!error}
+      transition='all .5s ease'
+      _focusVisible={{
+        outline: 'none',
+      }}
+      {...props}
+    />
 
-      {error && <FormErrorMessage>{error}</FormErrorMessage>}
-    </FormControl>
-  );
-});
+    {error && <FormErrorMessage>{error}</FormErrorMessage>}
+  </FormControl>
+);
 
-export default memo(Input);
+export default memo(forwardRef<HTMLInputElement, InputProps>(Input));

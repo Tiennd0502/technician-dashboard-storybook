@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
-import { ChakraProvider } from '../app/lib/providers';
+import { Provider } from '../app/lib/providers';
+import { AppRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 const preview: Preview = {
   parameters: {
@@ -11,12 +12,15 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    nextRouter: {
+      Provider: AppRouterContext.Provider,
+    },
   },
   decorators: [
     (Story) => (
-      <ChakraProvider>
+      <Provider>
         <Story />
-      </ChakraProvider>
+      </Provider>
     ),
   ],
 };
