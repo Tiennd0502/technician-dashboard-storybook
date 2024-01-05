@@ -157,7 +157,11 @@ exports[`Table test cases should render correctly 1`] = `
         </div>
         <div
           class="css-4khqpw"
-        />
+        >
+          <div
+            class="css-1gqs4bv"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -235,7 +239,11 @@ exports[`Table test cases should render correctly 1`] = `
         </div>
         <div
           class="css-4khqpw"
-        />
+        >
+          <div
+            class="css-1gqs4bv"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -313,7 +321,11 @@ exports[`Table test cases should render correctly 1`] = `
         </div>
         <div
           class="css-4khqpw"
-        />
+        >
+          <div
+            class="css-1gqs4bv"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -391,7 +403,11 @@ exports[`Table test cases should render correctly 1`] = `
         </div>
         <div
           class="css-4khqpw"
-        />
+        >
+          <div
+            class="css-1gqs4bv"
+          />
+        </div>
       </div>
     </div>
   </div>
