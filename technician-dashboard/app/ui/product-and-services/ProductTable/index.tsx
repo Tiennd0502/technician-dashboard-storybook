@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import { Filter, STATUS, TableData } from '@/lib/interfaces';
 
 // Constants
-import { DEFAULT_PRODUCT_FILTER, PRODUCT_LIMIT, ROUTES } from '@/lib/constants';
+import { DEFAULT_PRODUCT_FILTER, ROUTES } from '@/lib/constants';
 
 // Components / icons
 import { ConfirmModal, Pagination, SearchBox, StatusLabel, Table } from '@/ui/components';
@@ -22,7 +22,6 @@ const ProductTable = () => {
   const router = useRouter();
   const [productFilter, setProductFilter] = useState<Filter>(DEFAULT_PRODUCT_FILTER);
   const [productDelete, setProductDelete] = useState<string>('');
-  const [page, setPage] = useState<number>(1);
 
   const {
     isOpen: isOpenConfirmModal,
@@ -35,12 +34,17 @@ const ProductTable = () => {
 
   const { data: products = [], isLoading } = useFetchProducts(productFilter);
 
-  const ProductList = useMemo(
-    () => products.slice(page - 1, page - 1 + PRODUCT_LIMIT),
-    [page, products],
-  );
+  // TODO: Config api return total pages
+  const { data: productAll = [] } = useFetchProducts({
+    name: productFilter.name || '',
+    sortBy: productFilter.sortBy,
+    order: productFilter.order,
+  });
 
-  const totalPage = useMemo(() => Math.ceil(products.length / PRODUCT_LIMIT), [products]);
+  const totalPage = useMemo(
+    () => Math.ceil(productAll.length / +DEFAULT_PRODUCT_FILTER.limit),
+    [productAll],
+  );
 
   const handleSortProduct = useCallback((value: Filter) => {
     setProductFilter((prev: Filter) => ({
@@ -58,6 +62,7 @@ const ProductTable = () => {
     setProductFilter((prev: Filter) => ({
       ...prev,
       name: value,
+      page: '1',
     }));
   }, []);
 
@@ -81,7 +86,10 @@ const ProductTable = () => {
   );
 
   const handleChangePage = useCallback((page: number) => {
-    setPage(page);
+    setProductFilter((prev: Filter) => ({
+      ...prev,
+      page: page.toString(),
+    }));
   }, []);
 
   const productHeaderColumn = useMemo(() => {
@@ -176,12 +184,16 @@ const ProductTable = () => {
         isLoading={isLoading}
         filter={productFilter}
         columns={productHeaderColumn}
-        data={ProductList as unknown as TableData[]}
+        data={products as unknown as TableData[]}
         onEdit={handleClickEditProduct}
         onDelete={handleOpenConfirmModal}
       />
 
-      <Pagination onChange={handleChangePage} total={totalPage} page={page} />
+      <Pagination
+        onChange={handleChangePage}
+        total={totalPage}
+        page={+(productFilter?.page || 1)}
+      />
     </VStack>
   );
 };
