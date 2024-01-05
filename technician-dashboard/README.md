@@ -1,4 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS practice
+
+## Overview
+
+- This document provides information about NextJS practice
+
+## Tech stacks
+
+- NextJS
+
+- React
+
+- React query
+
+- React hook form
+
+- TypeScript
+
+- Mock API
+
+- Chakra ui
+
+- Storybook
+
+- Jest, React testing library
+
+## Timeline
+
+- Estimated time: 7 days (Dec 28, 2023 - Jan 08, 2024)
+
+## Time size
+
+- 1 dev
+
+## Editor
+
+- [Visual studio code](https://code.visualstudio.com/)
+
+## Targets
+
+- Understand and apply knowledge of [Next.js](https://nextjs.org/) to build an application.
+
+- Code splitting.
+
+- Apply [Storybook](https://storybook.js.org/).
+
+- Apply [React Query](https://tanstack.com/query/latest/) for fetching data.
+
+- Apply [React Hook Form](https://react-hook-form.com/) for validate form.
+
+- Apply [Jest](https://jestjs.io/) and [React testing library](https://testing-library.com/) for unit testing.
+
+## Features
+
+- Users can view products and service page.
+
+- Users can see list product.
+
+- Users can action CRUD product.
+
+- Users can search for products by name.
+
+- Users can sort products by name.
+
+## Requirements
+
+- [Node](https://nodejs.org/en/ "Node") >= 20.0.0 / [pnpm](https://pnpm.io/) >= 8.6.1
 
 ## Getting started
 
@@ -19,18 +85,3 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 6. Run storybook: pnpm storybook
 
 7. Open on web: http://localhost:6006
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
