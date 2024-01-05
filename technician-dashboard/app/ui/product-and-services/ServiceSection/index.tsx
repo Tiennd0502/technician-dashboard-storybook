@@ -46,7 +46,9 @@ const ServiceSection = ({ width, ...props }: ServiceSectionProps) => {
     >
       <Heading>About Services</Heading>
       {isLoading ? (
-        <Spinner />
+        <Flex h='full' justifyContent='center'>
+          <Spinner />
+        </Flex>
       ) : (
         <>
           <ServiceList list={services as Service[]} />

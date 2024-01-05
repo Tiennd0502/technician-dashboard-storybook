@@ -8,10 +8,9 @@ import { TriangleDownIcon, TriangleUpIcon } from '@chakra-ui/icons';
 import { TableData, TableHeader, SORT_TYPE, Filter } from '@/lib/interfaces';
 
 // Components
-import { Spinner } from '..';
+import { TRUNCATE_STYLE } from '@/lib/constants';
 
 interface TableProps {
-  isLoading?: boolean;
   filter: Filter;
   columns: TableHeader[];
   data: TableData[];
@@ -19,28 +18,28 @@ interface TableProps {
   onDelete?: (id: string) => void;
 }
 
-const Table = ({
-  isLoading = false,
-  filter: { sortBy, order },
-  columns,
-  data,
-  onEdit,
-  onDelete,
-}: TableProps) => {
+const Table = ({ filter: { sortBy, order }, columns, data, onEdit, onDelete }: TableProps) => {
   const [isLargeScreen] = useMediaQuery('(min-width: 768px)');
 
-  return isLoading ? (
-    <Spinner />
-  ) : (
+  return (
     <Flex gap='1' flexDirection='column' w='full'>
       {isLargeScreen && (
         <Flex bg='background.section.primary' borderRadius='md' h='50px' w='100%' role='list'>
-          {columns?.map(({ key, label, isCheckbox, width, onSort }) =>
+          {columns?.map(({ key, label, isCheckbox, width, onSort, isAction = false }) =>
             isCheckbox ? (
               <Box minW={width} key={key}></Box>
             ) : (
               <Flex key={key} alignItems='center' gap='5' w={width}>
-                <Text variant='textSm'>{label}</Text>
+                <Text
+                  variant='textSm'
+                  {...(isAction && {
+                    w: 'full',
+                    textAlign: 'right',
+                    marginRight: '50px',
+                  })}
+                >
+                  {label}
+                </Text>
                 {onSort ? (
                   <Flex flexDirection='column' cursor='pointer'>
                     <TriangleUpIcon
@@ -93,9 +92,16 @@ const Table = ({
                     <Checkbox size='lg' isDisabled />
                   </Flex>
                 ) : (
-                  <Flex w={isLargeScreen ? width : '100%'} key={key} alignItems='center'>
+                  <Flex
+                    w={isLargeScreen ? width : '100%'}
+                    key={key}
+                    alignItems='center'
+                    gap='4'
+                    overflow='hidden'
+                    pr='2'
+                  >
                     {!isLargeScreen && (
-                      <Text variant='textMd' mr='auto'>
+                      <Text variant='textMd' mr='auto' w='max-content'>
                         {label}:
                       </Text>
                     )}
@@ -104,18 +110,20 @@ const Table = ({
                     ) : isAction ? (
                       <>
                         {onEdit && (
-                          <Button px='2' onClick={() => onEdit(item.id)}>
+                          <Button px='2' ml='auto' mr='4' onClick={() => onEdit(item.id)}>
                             Edit{' '}
                           </Button>
                         )}
                         {onDelete && (
-                          <Button variant='outline' ml='4' px='2' onClick={() => onDelete(item.id)}>
+                          <Button variant='outline' mr='2' px='2' onClick={() => onDelete(item.id)}>
                             Delete
                           </Button>
                         )}
                       </>
                     ) : (
-                      <Text variant='textSm'>{item[key]}</Text>
+                      <Text variant='textSm' {...TRUNCATE_STYLE}>
+                        {item[key]}
+                      </Text>
                     )}
                   </Flex>
                 ),
