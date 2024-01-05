@@ -4,11 +4,8 @@ import { memo } from 'react';
 import { Text, Flex, Box, Button, Checkbox, useMediaQuery } from '@chakra-ui/react';
 import { TriangleDownIcon, TriangleUpIcon } from '@chakra-ui/icons';
 
-// Types
 import { TableData, TableHeader, SORT_TYPE, Filter } from '@/lib/interfaces';
-
-// Components
-import { TRUNCATE_STYLE } from '@/lib/constants';
+import { NO_DATA, TRUNCATE_STYLE } from '@/lib/constants';
 
 interface TableProps {
   filter: Filter;
@@ -43,6 +40,7 @@ const Table = ({ filter: { sortBy, order }, columns, data, onEdit, onDelete }: T
                 {onSort ? (
                   <Flex flexDirection='column' cursor='pointer'>
                     <TriangleUpIcon
+                      data-testid='sort-asc'
                       w='4'
                       h='2'
                       {...(sortBy === key &&
@@ -52,6 +50,7 @@ const Table = ({ filter: { sortBy, order }, columns, data, onEdit, onDelete }: T
                       onClick={() => onSort({ sortBy: key, order: SORT_TYPE.Asc })}
                     />
                     <TriangleDownIcon
+                      data-testid='sort-desc'
                       w='4'
                       h='2'
                       onClick={() => onSort({ sortBy: key, order: SORT_TYPE.Desc })}
@@ -110,12 +109,23 @@ const Table = ({ filter: { sortBy, order }, columns, data, onEdit, onDelete }: T
                     ) : isAction ? (
                       <Flex w='full' justifyContent='flex-end' alignItems='center'>
                         {onEdit && (
-                          <Button size='sm' ml='auto' mr='2' onClick={() => onEdit(item.id)}>
+                          <Button
+                            data-testid='btn-edit'
+                            size='sm'
+                            ml='auto'
+                            mr='2'
+                            onClick={() => onEdit(item.id)}
+                          >
                             Edit{' '}
                           </Button>
                         )}
                         {onDelete && (
-                          <Button size='sm' variant='outline' onClick={() => onDelete(item.id)}>
+                          <Button
+                            data-testid='btn-delete'
+                            size='sm'
+                            variant='outline'
+                            onClick={() => onDelete(item.id)}
+                          >
                             Delete
                           </Button>
                         )}
@@ -140,7 +150,9 @@ const Table = ({ filter: { sortBy, order }, columns, data, onEdit, onDelete }: T
           borderRadius='md'
           borderColor='secondary'
         >
-          <Text variant='textMd'>No data found</Text>
+          <Text variant='textMd' data-testId='no-data'>
+            {NO_DATA}
+          </Text>
         </Flex>
       )}
     </Flex>
