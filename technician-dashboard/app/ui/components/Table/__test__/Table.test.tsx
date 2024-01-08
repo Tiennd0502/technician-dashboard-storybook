@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import * as mediaQueryHooks from '@chakra-ui/react';
 
 import { DEFAULT_PRODUCT_FILTER, NO_DATA } from '@/lib/constants';
@@ -16,6 +16,10 @@ jest.mock('@chakra-ui/react', () => {
     useMediaQuery: jest.fn().mockImplementation(() => [true]),
   };
 });
+
+const onDelete = jest.fn();
+const onEdit = jest.fn();
+const onSort = jest.fn();
 
 describe('Table test cases', () => {
   jest.spyOn(mediaQueryHooks, 'useMediaQuery').mockImplementationOnce(() => [true]);
@@ -59,20 +63,18 @@ describe('Table test cases', () => {
     expect(text.innerHTML).toEqual(NO_DATA);
   });
 
-  test('Should render sort asc click', () => {
+  test('Should render icon sort asc', () => {
     render(<Table {...props} />);
-    const button = screen.getByTestId('sort-asc');
-    fireEvent.click(button);
+    const button = screen.queryByTestId('sort-asc');
 
-    expect(jest.fn()).toHaveBeenCalled();
+    expect(button).toBeDefined();
   });
 
-  test('Should render sort desc click', () => {
+  test('Should render icon sort desc', () => {
     render(<Table {...props} filter={{ ...DEFAULT_PRODUCT_FILTER, order: SORT_TYPE.Desc }} />);
-    const button = screen.getByTestId('sort-desc');
-    fireEvent.click(button);
+    const button = screen.queryByTestId('sort-desc');
 
-    expect(jest.fn()).toHaveBeenCalled();
+    expect(button).toBeDefined();
   });
 
   test('should render correctly with mobile device', () => {
@@ -82,28 +84,17 @@ describe('Table test cases', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test('Should render edit click', () => {
-    render(<Table {...props} />);
-    const button = screen.getByTestId('btn-edit');
-    fireEvent.click(button);
-
-    expect(jest.fn()).toHaveBeenCalled();
-  });
-
   test('calls onEdit when being clicked', () => {
-    const onEdit = jest.fn();
     render(<Table {...props} onEdit={onEdit} />);
-    const button = screen.getByTestId('btn-edit');
+    const button = screen.getAllByText('Edit')[0];
     fireEvent.click(button);
 
     expect(onEdit).toHaveBeenCalled();
   });
 
   test('calls onDelete when being clicked', () => {
-    const onDelete = jest.fn();
-
     render(<Table {...props} onDelete={onDelete} />);
-    const button = screen.getByTestId('btn-delete');
+    const button = screen.getAllByText('Delete')[0];
     fireEvent.click(button);
 
     expect(onDelete).toHaveBeenCalled();

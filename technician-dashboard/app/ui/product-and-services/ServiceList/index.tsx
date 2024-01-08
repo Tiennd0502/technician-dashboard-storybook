@@ -1,13 +1,8 @@
 import { memo } from 'react';
 import { Flex } from '@chakra-ui/react';
 
-// Constants
 import { CURRENCY_CHARACTERS } from '@/lib/constants';
-
-// Types
 import { Service } from '@/lib/interfaces';
-
-// Components
 import { ServiceCard } from '..';
 
 interface ServiceListProps {

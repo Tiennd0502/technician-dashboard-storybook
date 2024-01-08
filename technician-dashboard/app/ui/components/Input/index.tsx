@@ -31,4 +31,8 @@ export const Input = ({ type = 'text', error, label, ref, ...props }: InputProps
   </FormControl>
 );
 
-export default memo(forwardRef<HTMLInputElement, InputProps>(Input));
+const Component = forwardRef<HTMLInputElement, InputProps>(function Component(props, ref) {
+  return <Input {...props} ref={ref} />;
+});
+
+export default memo(Component);
