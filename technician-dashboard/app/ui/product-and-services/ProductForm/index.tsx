@@ -25,6 +25,7 @@ import { useProduct } from '@/lib/hooks';
 
 // Components
 import { Input } from '@/ui/commons';
+import { removeSpaces } from '@/lib/utils';
 
 interface ProductFromProps {
   product?: Product;
@@ -85,13 +86,17 @@ const ProductFrom = ({ product }: ProductFromProps) => {
         control={control}
         name='name'
         rules={PRODUCT_RULES.name}
-        render={({ field: { value, ...field }, fieldState: { error } }) => (
+        render={({ field: { value, onChange, ...field }, fieldState: { error } }) => (
           <Input
             {...field}
             error={error?.message || ''}
             label='Product Name:'
-            defaultValue={value}
+            value={removeSpaces(value)}
             placeholder='Product Name'
+            onChange={onChange}
+            onBlur={() => {
+              onChange(removeSpaces(value, true));
+            }}
           />
         )}
       />
@@ -99,13 +104,17 @@ const ProductFrom = ({ product }: ProductFromProps) => {
         control={control}
         name='brand'
         rules={PRODUCT_RULES.service}
-        render={({ field: { value, ...field }, fieldState: { error } }) => (
+        render={({ field: { value, onChange, ...field }, fieldState: { error } }) => (
           <Input
             {...field}
             error={error?.message || ''}
             label='Brand Name:'
-            defaultValue={value}
             placeholder='Brand Name'
+            value={removeSpaces(value)}
+            onChange={onChange}
+            onBlur={() => {
+              onChange(removeSpaces(value, true));
+            }}
           />
         )}
       />
@@ -113,13 +122,17 @@ const ProductFrom = ({ product }: ProductFromProps) => {
         control={control}
         name='service'
         rules={PRODUCT_RULES.service}
-        render={({ field: { value, ...field }, fieldState: { error } }) => (
+        render={({ field: { value, onChange, ...field }, fieldState: { error } }) => (
           <Input
             {...field}
             error={error?.message || ''}
             label='Service:'
-            defaultValue={value}
             placeholder='Service'
+            value={removeSpaces(value)}
+            onChange={onChange}
+            onBlur={() => {
+              onChange(removeSpaces(value, true));
+            }}
           />
         )}
       />
