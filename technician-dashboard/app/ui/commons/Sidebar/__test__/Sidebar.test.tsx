@@ -2,6 +2,11 @@ import { render } from '@testing-library/react';
 
 import { MENU_ITEM_LIST } from '@/lib/constants';
 import Sidebar from '..';
+import { useRouter } from 'next/router';
+
+jest.mock('next/navigation', () => ({
+  usePathname: jest.fn().mockReturnValue('/product-and-services'),
+}));
 
 describe('Sidebar test cases', () => {
   const props = {

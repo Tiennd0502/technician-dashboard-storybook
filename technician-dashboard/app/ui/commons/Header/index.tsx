@@ -1,10 +1,7 @@
 import { memo } from 'react';
 import { Flex, Heading } from '@chakra-ui/react';
 
-// Types
 import { User } from '@/lib/interfaces';
-
-// Components | Icons
 import { NotificationIcon } from '@/ui/icons';
 import { IconButton, Dropdown } from '..';
 

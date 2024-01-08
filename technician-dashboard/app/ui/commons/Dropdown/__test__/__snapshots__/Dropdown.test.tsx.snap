@@ -7,6 +7,7 @@ exports[`Dropdown test cases should render correctly 1`] = `
     aria-expanded="false"
     aria-haspopup="menu"
     class="chakra-button chakra-menu__menu-button css-4xx2wk"
+    data-testid="btn-dropdown"
     id="menu-button-:r1:"
     type="button"
   >
@@ -40,6 +41,7 @@ exports[`Dropdown test cases should render correctly 1`] = `
       <svg
         aria-hidden="true"
         class="chakra-icon css-q5208i"
+        data-testid="down-icon"
         focusable="false"
         viewBox="0 0 24 24"
       >
