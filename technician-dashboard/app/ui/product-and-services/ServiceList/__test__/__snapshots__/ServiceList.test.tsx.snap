@@ -4,7 +4,7 @@ exports[`ServiceList test cases should render correctly 1`] = `
 <div>
   <div
     class="css-1j52cd2"
-    role="list"
+    data-testid="list-services"
   >
     <a
       class="chakra-link css-qwh07e"

@@ -15,8 +15,8 @@ describe('Pagination test cases', () => {
   });
 
   test('Should render enough elements', () => {
-    const { getByRole } = render(<Pagination {...props} />);
-    const pageList = getByRole('list');
+    const { getByTestId } = render(<Pagination {...props} />);
+    const pageList = getByTestId('list-page');
 
     expect(pageList.childNodes).toHaveLength(9);
   });

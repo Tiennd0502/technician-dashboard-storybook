@@ -21,7 +21,13 @@ const Table = ({ filter: { sortBy, order }, columns, data, onEdit, onDelete }: T
   return (
     <Flex gap='1' flexDirection='column' w='full'>
       {isLargeScreen && (
-        <Flex bg='background.section.primary' borderRadius='md' h='50px' w='100%' role='list'>
+        <Flex
+          bg='background.section.primary'
+          borderRadius='md'
+          h='50px'
+          w='100%'
+          data-testid='list-header'
+        >
           {columns?.map(({ key, label, isCheckbox, width, onSort, isAction = false }) =>
             isCheckbox ? (
               <Box minW={width} key={key}></Box>
@@ -88,7 +94,7 @@ const Table = ({ filter: { sortBy, order }, columns, data, onEdit, onDelete }: T
                     alignItems='center'
                     justifyContent={isLargeScreen ? 'center' : 'flex-start'}
                   >
-                    <Checkbox size='lg' isDisabled />
+                    <Checkbox size='lg' isDisabled aria-label={item.id} />
                   </Flex>
                 ) : (
                   <Flex
