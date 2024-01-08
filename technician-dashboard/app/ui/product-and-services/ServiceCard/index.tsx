@@ -1,10 +1,7 @@
 import { memo } from 'react';
 import { Link, Spacer, Text, Flex } from '@chakra-ui/react';
 
-// Constants
 import { TRUNCATE_STYLE } from '@/lib/constants';
-
-// Types
 import { Service } from '@/lib/interfaces';
 
 interface ServiceCardProps {
