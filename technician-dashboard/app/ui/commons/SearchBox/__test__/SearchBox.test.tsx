@@ -24,6 +24,15 @@ describe('SearchBox component', () => {
     expect(onSearch).toHaveBeenCalledWith('keyword');
   });
 
+  test('should call the search handler when enter input', () => {
+    const { getByPlaceholderText } = render(<SearchBox {...props} />);
+    const searchInput = getByPlaceholderText('Enter keyword...');
+    fireEvent.change(searchInput, { target: { value: 'keyword1' } });
+    fireEvent.keyDown(searchInput, { key: 'Enter', code: '13' });
+
+    expect(onSearch).toHaveBeenCalledWith('keyword1');
+  });
+
   test('should show search icon', () => {
     const { getByTestId } = render(<SearchBox {...props} />);
     const target = getByTestId('search-icon');

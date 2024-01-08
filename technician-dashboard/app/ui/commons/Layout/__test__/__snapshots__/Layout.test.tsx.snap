@@ -521,6 +521,7 @@ exports[`Layout component match snapshot 1`] = `
             aria-expanded="false"
             aria-haspopup="menu"
             class="chakra-button chakra-menu__menu-button css-4xx2wk"
+            data-testid="btn-dropdown"
             id="menu-button-:r5:"
             type="button"
           >
@@ -554,6 +555,7 @@ exports[`Layout component match snapshot 1`] = `
               <svg
                 aria-hidden="true"
                 class="chakra-icon css-q5208i"
+                data-testid="down-icon"
                 focusable="false"
                 viewBox="0 0 24 24"
               >

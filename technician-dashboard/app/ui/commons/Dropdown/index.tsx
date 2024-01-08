@@ -15,10 +15,15 @@ const Dropdown = ({ name, avatar }: UserCardProps) => (
     {({ isOpen }) => (
       <>
         <MenuButton
+          data-testid='btn-dropdown'
           as={Button}
           variant='ghost'
           rightIcon={
-            isOpen ? <ChevronUpIcon color='primary.500' /> : <ChevronDownIcon color='primary.500' />
+            isOpen ? (
+              <ChevronUpIcon data-testid='up-icon' color='primary.500' />
+            ) : (
+              <ChevronDownIcon data-testid='down-icon' color='primary.500' />
+            )
           }
         >
           <Flex alignItems='center' gap='3'>
