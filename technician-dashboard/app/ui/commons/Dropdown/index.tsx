@@ -27,7 +27,7 @@ const Dropdown = ({ name, avatar }: UserCardProps) => (
           }
         >
           <Flex alignItems='center' gap='3'>
-            <Avatar name={name} src={avatar} />
+            <Avatar name={name} src={avatar} aria-label='Avatar User' />
             <Text>{name}</Text>
           </Flex>
         </MenuButton>

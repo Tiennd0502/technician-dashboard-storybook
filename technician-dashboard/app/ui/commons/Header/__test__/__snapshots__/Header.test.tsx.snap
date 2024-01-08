@@ -55,6 +55,7 @@ exports[`Header test cases should render correctly 1`] = `
             class="css-guqklo"
           >
             <span
+              aria-label="Avatar User"
               class="chakra-avatar css-1ruhx4w"
             >
               <div

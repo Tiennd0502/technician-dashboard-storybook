@@ -26,7 +26,7 @@ exports[`Layout component match snapshot 1`] = `
               decoding="async"
               height="38"
               loading="lazy"
-              src="/technician.svg"
+              src="/images/technician.svg"
               style="color: transparent;"
               width="37"
             />
@@ -532,6 +532,7 @@ exports[`Layout component match snapshot 1`] = `
                 class="css-guqklo"
               >
                 <span
+                  aria-label="Avatar User"
                   class="chakra-avatar css-1ruhx4w"
                 >
                   <div
