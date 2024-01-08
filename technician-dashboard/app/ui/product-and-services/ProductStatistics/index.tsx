@@ -2,7 +2,7 @@ import { Flex, Heading, Text, Button, Box } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import { PRODUCT_STATISTICS_URL } from '@/lib/constants';
-import { StatusLabel } from '@/ui/components';
+import { StatusLabel } from '@/ui/commons';
 import { STATUS } from '@/lib/interfaces';
 
 interface ProductStatisticsProps {
