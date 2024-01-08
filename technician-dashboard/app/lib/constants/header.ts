@@ -1,7 +1,9 @@
+import { AVATAR_DEFAULT } from '.';
+
 export const HEADER_INFO = {
   user: {
     name: 'Belle',
-    avatar: '/empty-avatar.svg',
+    avatar: AVATAR_DEFAULT,
   },
   title: 'Product & Services',
 };
