@@ -12,7 +12,7 @@ import { Filter, STATUS, TableData } from '@/lib/interfaces';
 import { DEFAULT_PRODUCT_FILTER, ROUTES } from '@/lib/constants';
 
 // Components / icons
-import { ConfirmModal, Pagination, SearchBox, Spinner, StatusLabel, Table } from '@/ui/components';
+import { ConfirmModal, Pagination, SearchBox, Spinner, StatusLabel, Table } from '@/ui/commons';
 import { FilterIcon } from '@/ui/icons';
 
 // Hooks

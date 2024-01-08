@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { Provider } from '@/lib/providers';
-import { Layout } from '@/ui/components';
+import { Layout } from '@/ui/commons';
 
 export const metadata: Metadata = {
   title: 'Technician Dashboard',

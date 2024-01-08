@@ -24,7 +24,7 @@ import { PRODUCT_RULES } from '@/lib/constants';
 import { useProduct } from '@/lib/hooks';
 
 // Components
-import { Input } from '@/ui/components';
+import { Input } from '@/ui/commons';
 
 interface ProductFromProps {
   product?: Product;

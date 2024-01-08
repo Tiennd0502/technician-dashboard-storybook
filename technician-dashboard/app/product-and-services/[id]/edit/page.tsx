@@ -7,7 +7,7 @@ import { Box, Flex } from '@chakra-ui/react';
 import { useFetchProduct } from '@/lib/hooks';
 
 // Components
-import { Spinner } from '@/ui/components';
+import { Spinner } from '@/ui/commons';
 import { ProductForm } from '@/ui/product-and-services';
 
 interface PageProps {

@@ -1,5 +1,5 @@
 import { STATUS } from '@/lib/interfaces';
-import { StatusLabel } from '@/ui/components';
+import { StatusLabel } from '@/ui/commons';
 
 export const PRODUCTS = [
   {

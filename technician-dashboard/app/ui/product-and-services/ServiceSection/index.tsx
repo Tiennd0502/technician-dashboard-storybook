@@ -10,7 +10,7 @@ import { Category, Service } from '@/lib/interfaces';
 import { API_ROUTES } from '@/lib/constants';
 
 // Components
-import { Spinner } from '@/ui/components';
+import { Spinner } from '@/ui/commons';
 import { Categories, ServiceList } from '@/ui/product-and-services';
 
 // Hooks
