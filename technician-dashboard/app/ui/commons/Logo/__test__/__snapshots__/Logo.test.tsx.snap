@@ -11,7 +11,7 @@ exports[`should render correctly 1`] = `
       decoding="async"
       height="38"
       loading="lazy"
-      src="/technician.svg"
+      src="/images/technician.svg"
       style="color: transparent;"
       width="37"
     />
