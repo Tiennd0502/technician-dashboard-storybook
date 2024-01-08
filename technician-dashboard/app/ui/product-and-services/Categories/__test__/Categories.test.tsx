@@ -14,15 +14,15 @@ describe('Categories test cases', () => {
   });
 
   test('Should render enough elements', () => {
-    const { getByRole } = render(<Categories {...props} />);
-    const categories = getByRole('list');
+    const { getByTestId } = render(<Categories {...props} />);
+    const categories = getByTestId('list-category');
 
     expect(categories.childNodes).toHaveLength(CATEGORIES.length);
   });
 
   test('Should render empty elements', () => {
-    const { getByRole } = render(<Categories list={[]} />);
-    const categories = getByRole('list');
+    const { getByTestId } = render(<Categories list={[]} />);
+    const categories = getByTestId('list-category');
 
     expect(categories.childNodes).toHaveLength(0);
   });

@@ -7,7 +7,7 @@ exports[`Table test cases should render correctly 1`] = `
   >
     <div
       class="css-17i2wn"
-      role="list"
+      data-testid="list-header"
     >
       <div
         class="css-c8uo9c"
@@ -99,6 +99,7 @@ exports[`Table test cases should render correctly 1`] = `
           >
             <input
               aria-disabled="true"
+              aria-label="1"
               class="chakra-checkbox__input"
               disabled=""
               style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
@@ -181,6 +182,7 @@ exports[`Table test cases should render correctly 1`] = `
           >
             <input
               aria-disabled="true"
+              aria-label="2"
               class="chakra-checkbox__input"
               disabled=""
               style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
@@ -263,6 +265,7 @@ exports[`Table test cases should render correctly 1`] = `
           >
             <input
               aria-disabled="true"
+              aria-label="3"
               class="chakra-checkbox__input"
               disabled=""
               style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
@@ -345,6 +348,7 @@ exports[`Table test cases should render correctly 1`] = `
           >
             <input
               aria-disabled="true"
+              aria-label="4"
               class="chakra-checkbox__input"
               disabled=""
               style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
@@ -436,6 +440,7 @@ exports[`Table test cases should render correctly with mobile device 1`] = `
           >
             <input
               aria-disabled="true"
+              aria-label="1"
               class="chakra-checkbox__input"
               disabled=""
               style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
@@ -548,6 +553,7 @@ exports[`Table test cases should render correctly with mobile device 1`] = `
           >
             <input
               aria-disabled="true"
+              aria-label="2"
               class="chakra-checkbox__input"
               disabled=""
               style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
@@ -660,6 +666,7 @@ exports[`Table test cases should render correctly with mobile device 1`] = `
           >
             <input
               aria-disabled="true"
+              aria-label="3"
               class="chakra-checkbox__input"
               disabled=""
               style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
@@ -772,6 +779,7 @@ exports[`Table test cases should render correctly with mobile device 1`] = `
           >
             <input
               aria-disabled="true"
+              aria-label="4"
               class="chakra-checkbox__input"
               disabled=""
               style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"

@@ -36,15 +36,17 @@ describe('Table test cases', () => {
   });
 
   test('Should render enough header elements', () => {
-    const { getByRole } = render(<Table {...props} />);
-    const header = getByRole('list');
+    const { getByTestId } = render(<Table {...props} />);
+    const header = getByTestId('list-header');
 
     expect(header.childNodes).toHaveLength(PRODUCT_HEADER_COLUMNS.length);
   });
 
   test('Should render empty header elements', () => {
-    const { getByRole } = render(<Table data={[]} columns={[]} filter={DEFAULT_PRODUCT_FILTER} />);
-    const header = getByRole('list');
+    const { getByTestId } = render(
+      <Table data={[]} columns={[]} filter={DEFAULT_PRODUCT_FILTER} />,
+    );
+    const header = getByTestId('list-header');
 
     expect(header.childNodes).toHaveLength(0);
   });

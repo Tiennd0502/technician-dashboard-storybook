@@ -19,7 +19,7 @@ const Categories = ({ list }: CategoriesProps) => {
   );
 
   return (
-    <Flex gap='5' role='list'>
+    <Flex gap='5' data-testid='list-category'>
       {list.map(({ id, image, label }) => (
         <Link key={id} pos='relative' href='#' {...getLinkStyles(image)}>
           <Text

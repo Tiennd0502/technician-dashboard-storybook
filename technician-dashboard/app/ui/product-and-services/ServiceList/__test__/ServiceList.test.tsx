@@ -14,15 +14,15 @@ describe('ServiceList test cases', () => {
   });
 
   test('Should render enough elements', () => {
-    const { getByRole } = render(<ServiceList {...props} />);
-    const serviceList = getByRole('list');
+    const { getByTestId } = render(<ServiceList {...props} />);
+    const serviceList = getByTestId('list-services');
 
     expect(serviceList.childNodes).toHaveLength(SERVICES.length);
   });
 
   test('Should render empty elements', () => {
-    const { getByRole } = render(<ServiceList list={[]} />);
-    const serviceList = getByRole('list');
+    const { getByTestId } = render(<ServiceList list={[]} />);
+    const serviceList = getByTestId('list-services');
 
     expect(serviceList.childNodes).toHaveLength(0);
   });

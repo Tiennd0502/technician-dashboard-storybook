@@ -4,9 +4,10 @@ exports[`Pagination test cases should render correctly 1`] = `
 <div>
   <div
     class="css-16kx4g3"
-    role="list"
+    data-testid="list-page"
   >
     <button
+      aria-label="Previous page in the list"
       class="chakra-button css-17rlipp"
       disabled=""
       type="button"
@@ -23,36 +24,42 @@ exports[`Pagination test cases should render correctly 1`] = `
       </svg>
     </button>
     <button
+      aria-label="1"
       class="chakra-button css-17rlipp"
       type="button"
     >
       1
     </button>
     <button
+      aria-label="Page number 2 in the list"
       class="chakra-button css-17rlipp"
       type="button"
     >
       2
     </button>
     <button
+      aria-label="Page number 3 in the list"
       class="chakra-button css-17rlipp"
       type="button"
     >
       3
     </button>
     <button
+      aria-label="Page number 4 in the list"
       class="chakra-button css-17rlipp"
       type="button"
     >
       4
     </button>
     <button
+      aria-label="Page number 5 in the list"
       class="chakra-button css-17rlipp"
       type="button"
     >
       5
     </button>
     <button
+      aria-label="Page number ... in the list"
       class="chakra-button css-17rlipp"
       disabled=""
       type="button"
@@ -60,12 +67,14 @@ exports[`Pagination test cases should render correctly 1`] = `
       ...
     </button>
     <button
+      aria-label="10"
       class="chakra-button css-17rlipp"
       type="button"
     >
       10
     </button>
     <button
+      aria-label="Next page in the list"
       class="chakra-button css-17rlipp"
       type="button"
     >

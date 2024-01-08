@@ -43,11 +43,22 @@ const Pagination = ({ total, page, onChange }: PaginationProps) => {
   }, [total, page]);
 
   return (
-    <Flex columnGap='2' justifyContent='flex-end' w='full' role='list'>
-      <Button variant='outline' isDisabled={page <= 1} w='42px' onClick={handleClickPrev}>
+    <Flex columnGap='2' justifyContent='flex-end' w='full' data-testid='list-page'>
+      <Button
+        aria-label='Previous page in the list'
+        variant='outline'
+        isDisabled={page <= 1}
+        w='42px'
+        onClick={handleClickPrev}
+      >
         <ChevronLeftIcon fontSize={20} />
       </Button>
-      <Button w='42px' variant={page === 1 ? 'solid' : 'outline'} onClick={handleClickFirst}>
+      <Button
+        aria-label='1'
+        w='42px'
+        variant={page === 1 ? 'solid' : 'outline'}
+        onClick={handleClickFirst}
+      >
         1
       </Button>
       {pages.map((item, index) => {
@@ -59,6 +70,7 @@ const Pagination = ({ total, page, onChange }: PaginationProps) => {
 
         return (
           <Button
+            aria-label={`Page number ${item} in the list`}
             w='42px'
             variant={page === +item ? 'solid' : 'outline'}
             key={`${item}${index}`}
@@ -71,11 +83,22 @@ const Pagination = ({ total, page, onChange }: PaginationProps) => {
       })}
 
       {total >= 2 && (
-        <Button w='42px' variant={page === total ? 'solid' : 'outline'} onClick={handleClickLast}>
+        <Button
+          aria-label={total.toString()}
+          w='42px'
+          variant={page === total ? 'solid' : 'outline'}
+          onClick={handleClickLast}
+        >
           {total}
         </Button>
       )}
-      <Button variant='outline' isDisabled={page === total} w='42px' onClick={handleClickNext}>
+      <Button
+        aria-label='Next page in the list'
+        variant='outline'
+        isDisabled={page === total}
+        w='42px'
+        onClick={handleClickNext}
+      >
         <ChevronRightIcon fontSize={20} />
       </Button>
     </Flex>
