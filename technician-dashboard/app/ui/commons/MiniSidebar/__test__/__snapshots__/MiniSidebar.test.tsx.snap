@@ -3,7 +3,7 @@
 exports[`MiniSidebar test cases should render correctly 1`] = `
 <div>
   <div
-    class="css-kpe4m3"
+    class="css-1hrbm4s"
   >
     <div
       class="css-150u52e"
@@ -30,7 +30,7 @@ exports[`MiniSidebar test cases should render correctly 1`] = `
             Technician
           </p>
           <p
-            class="chakra-text css-uqf88n"
+            class="chakra-text css-1o9nuri"
           >
             At Home
           </p>

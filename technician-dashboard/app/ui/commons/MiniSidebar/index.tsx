@@ -18,7 +18,7 @@ const MiniSidebar = ({ listItem }: SidebarPros) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Flex pos='relative' flexDirection='column' bg='primary.500'>
+    <Flex pos='relative' flexDirection='column' bg='background.component.quaternary'>
       <Flex m='5' justifyContent='space-between' alignItems='center'>
         <Logo />
         <Button aria-label='Icon Toggle Menu' variant='outline' onClick={onToggle}>
@@ -32,7 +32,7 @@ const MiniSidebar = ({ listItem }: SidebarPros) => {
           pos='absolute'
           zIndex='2'
           top='100%'
-          bg='primary.500'
+          bg='background.component.quaternary'
           w='100%'
           role='list'
         >

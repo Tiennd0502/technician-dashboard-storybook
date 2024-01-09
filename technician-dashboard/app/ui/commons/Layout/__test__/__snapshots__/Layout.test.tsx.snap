@@ -9,7 +9,7 @@ exports[`Layout component match snapshot 1`] = `
       class="css-1o29zam"
     >
       <div
-        class="css-kpe4m3"
+        class="css-1hrbm4s"
       >
         <div
           class="css-150u52e"
@@ -36,7 +36,7 @@ exports[`Layout component match snapshot 1`] = `
                 Technician
               </p>
               <p
-                class="chakra-text css-uqf88n"
+                class="chakra-text css-1o9nuri"
               >
                 At Home
               </p>
@@ -117,15 +117,15 @@ exports[`Layout component match snapshot 1`] = `
                 class="css-guqklo"
               >
                 <span
-                  aria-label="Avatar User"
+                  aria-label="Avatar"
                   class="chakra-avatar css-1ruhx4w"
                 >
                   <div
-                    aria-label="Belle"
+                    aria-label="avatar"
                     class="chakra-avatar__initials css-0"
                     role="img"
                   >
-                    B
+                    a
                   </div>
                 </span>
                 <p

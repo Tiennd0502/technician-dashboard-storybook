@@ -25,7 +25,7 @@ const Logo = ({ src = LOGO_URL }: LogoProps) => (
         fontWeight='normal'
         variant='textSm'
         color='text.tertiary'
-        opacity='0.5'
+        opacity='0.85'
         letterSpacing='0.193px'
       >
         At Home
