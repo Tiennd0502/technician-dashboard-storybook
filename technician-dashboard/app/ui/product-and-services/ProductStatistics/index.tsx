@@ -42,6 +42,7 @@ const ProductStatistics = ({ src = PRODUCT_STATISTICS_URL }: ProductStatisticsPr
           height={180}
           blurDataURL={src}
           placeholder='blur'
+          priority
         />
       </Box>
       <Box alignSelf='start' mb='4'>
