@@ -7,6 +7,12 @@ import {
   Flex,
   FormControl,
   FormLabel,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
   Radio,
   RadioGroup,
   VStack,
@@ -28,10 +34,13 @@ import { Input } from '@/ui/commons';
 import { removeSpaces } from '@/lib/utils';
 
 interface ProductFromProps {
+  title?: string;
+  isOpen: boolean;
   product?: Product;
+  onClose: VoidFunction;
 }
 
-const ProductFrom = ({ product }: ProductFromProps) => {
+const ProductFrom = ({ title = 'Add Product', product, isOpen, onClose }: ProductFromProps) => {
   const router = useRouter();
   const toast = useToast();
 
@@ -57,6 +66,7 @@ const ProductFrom = ({ product }: ProductFromProps) => {
 
       mutate(data, {
         onSuccess: () => {
+          onClose();
           toast({
             title: `Product ${isUpdate ? 'updated' : 'created'}.`,
             status: 'success',
@@ -66,6 +76,7 @@ const ProductFrom = ({ product }: ProductFromProps) => {
           router.refresh();
         },
         onError: () => {
+          onClose();
           toast({
             title: `Failed to ${isUpdate ? 'update' : 'create'} the product.`,
             status: 'error',
@@ -75,96 +86,111 @@ const ProductFrom = ({ product }: ProductFromProps) => {
         },
       });
     },
-    [product?.id, editProduct, createProduct, toast, router],
+    [product?.id, editProduct, createProduct, toast, router, onClose],
   );
 
   const isLoading = isCreating || isEditing;
 
   return (
-    <VStack as='form' onSubmit={handleSubmit(handleSubmitProduct)} id='form' spacing='2' w='full'>
-      <Controller
-        control={control}
-        name='name'
-        rules={PRODUCT_RULES.name}
-        render={({ field: { value, onChange, ...field }, fieldState: { error } }) => (
-          <Input
-            {...field}
-            error={error?.message || ''}
-            label='Product Name:'
-            value={removeSpaces(value)}
-            placeholder='Product Name'
-            onChange={onChange}
-            onBlur={() => {
-              onChange(removeSpaces(value, true));
-            }}
-          />
-        )}
-      />
-      <Controller
-        control={control}
-        name='brand'
-        rules={PRODUCT_RULES.service}
-        render={({ field: { value, onChange, ...field }, fieldState: { error } }) => (
-          <Input
-            {...field}
-            error={error?.message || ''}
-            label='Brand Name:'
-            placeholder='Brand Name'
-            value={removeSpaces(value)}
-            onChange={onChange}
-            onBlur={() => {
-              onChange(removeSpaces(value, true));
-            }}
-          />
-        )}
-      />
-      <Controller
-        control={control}
-        name='service'
-        rules={PRODUCT_RULES.service}
-        render={({ field: { value, onChange, ...field }, fieldState: { error } }) => (
-          <Input
-            {...field}
-            error={error?.message || ''}
-            label='Service:'
-            placeholder='Service'
-            value={removeSpaces(value)}
-            onChange={onChange}
-            onBlur={() => {
-              onChange(removeSpaces(value, true));
-            }}
-          />
-        )}
-      />
-      <Controller
-        control={control}
-        name='status'
-        render={({ field: { value, ...field } }) => (
-          <FormControl>
-            <FormLabel>Status:</FormLabel>
-            <RadioGroup
-              defaultValue={value?.toString() || STATUS.Deactivated.toString()}
-              {...field}
-            >
-              <Flex gap='3'>
-                <Radio {...field} value={STATUS.Activated.toString()}>
-                  Activated
-                </Radio>
-                <Radio value={STATUS.Deactivated.toString()}>Deactivated</Radio>
-              </Flex>
-            </RadioGroup>
-          </FormControl>
-        )}
-      />
-      <Flex w='full'>
-        <Button type='submit' form='form' ml='auto' mr='6' isLoading={isLoading}>
-          Submit
-        </Button>
-        <Button variant='outline' isDisabled={isLoading} onClick={handleClose}>
-          Cancel
-        </Button>
-      </Flex>
-    </VStack>
+    <Modal isOpen={isOpen} onClose={onClose}>
+      <ModalOverlay />
+      <ModalContent borderRadius='md' p='7' minW='90%'>
+        <ModalHeader>{title}</ModalHeader>
+        <ModalCloseButton />
+        <ModalBody>
+          <VStack
+            as='form'
+            onSubmit={handleSubmit(handleSubmitProduct)}
+            id='form'
+            spacing='2'
+            w='full'
+          >
+            <Controller
+              control={control}
+              name='name'
+              rules={PRODUCT_RULES.name}
+              render={({ field: { value, onChange, ...field }, fieldState: { error } }) => (
+                <Input
+                  {...field}
+                  error={error?.message || ''}
+                  label='Product Name:'
+                  value={removeSpaces(value)}
+                  placeholder='Product Name'
+                  onChange={onChange}
+                  onBlur={() => {
+                    onChange(removeSpaces(value, true));
+                  }}
+                />
+              )}
+            />
+            <Controller
+              control={control}
+              name='brand'
+              rules={PRODUCT_RULES.service}
+              render={({ field: { value, onChange, ...field }, fieldState: { error } }) => (
+                <Input
+                  {...field}
+                  error={error?.message || ''}
+                  label='Brand Name:'
+                  placeholder='Brand Name'
+                  value={removeSpaces(value)}
+                  onChange={onChange}
+                  onBlur={() => {
+                    onChange(removeSpaces(value, true));
+                  }}
+                />
+              )}
+            />
+            <Controller
+              control={control}
+              name='service'
+              rules={PRODUCT_RULES.service}
+              render={({ field: { value, onChange, ...field }, fieldState: { error } }) => (
+                <Input
+                  {...field}
+                  error={error?.message || ''}
+                  label='Service:'
+                  placeholder='Service'
+                  value={removeSpaces(value)}
+                  onChange={onChange}
+                  onBlur={() => {
+                    onChange(removeSpaces(value, true));
+                  }}
+                />
+              )}
+            />
+            <Controller
+              control={control}
+              name='status'
+              render={({ field: { value, ...field } }) => (
+                <FormControl>
+                  <FormLabel>Status:</FormLabel>
+                  <RadioGroup
+                    defaultValue={value?.toString() || STATUS.Deactivated.toString()}
+                    {...field}
+                  >
+                    <Flex gap='3'>
+                      <Radio {...field} value={STATUS.Activated.toString()}>
+                        Activated
+                      </Radio>
+                      <Radio value={STATUS.Deactivated.toString()}>Deactivated</Radio>
+                    </Flex>
+                  </RadioGroup>
+                </FormControl>
+              )}
+            />
+            <Flex w='full'>
+              <Button type='submit' form='form' ml='auto' mr='6' isLoading={isLoading}>
+                Submit
+              </Button>
+              <Button variant='outline' isDisabled={isLoading} onClick={handleClose}>
+                Cancel
+              </Button>
+            </Flex>
+          </VStack>
+        </ModalBody>
+      </ModalContent>
+    </Modal>
   );
 };
 

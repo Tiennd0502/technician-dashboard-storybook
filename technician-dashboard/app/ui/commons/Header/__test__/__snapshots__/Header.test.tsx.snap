@@ -59,11 +59,11 @@ exports[`Header test cases should render correctly 1`] = `
               class="chakra-avatar css-1ruhx4w"
             >
               <div
-                aria-label="avatar"
+                aria-label="Avatar"
                 class="chakra-avatar__initials css-0"
                 role="img"
               >
-                a
+                A
               </div>
             </span>
             <p
