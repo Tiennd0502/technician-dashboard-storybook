@@ -10,4 +10,5 @@ export { default as Spinner } from './Spinner';
 export { default as Pagination } from './Pagination';
 export { default as Header } from './Header';
 export { default as Sidebar } from './Sidebar';
+export { default as MiniSidebar } from './MiniSidebar';
 export { default as Layout } from './Layout';

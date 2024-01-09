@@ -10,7 +10,7 @@ import {
 } from '@/ui/product-and-services';
 
 const Page = () => (
-  <Box pr='5'>
+  <Box px='5'>
     <Flex gap='5' flexWrap='wrap'>
       <ServiceSection
         width={{
