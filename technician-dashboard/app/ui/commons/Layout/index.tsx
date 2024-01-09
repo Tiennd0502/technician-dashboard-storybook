@@ -26,6 +26,7 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
       isSmallScreen
         ? {
             templateAreas: GRID_SMALL_TEMPLATE,
+            gridTemplateColumns: '100%',
           }
         : {
             templateAreas: GRID_TEMPLATE,
