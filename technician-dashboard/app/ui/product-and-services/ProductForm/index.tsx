@@ -68,6 +68,7 @@ const ProductFrom = ({ title = 'Add Product', product, isOpen, onClose }: Produc
         onSuccess: () => {
           onClose();
           toast({
+            position: 'top-right',
             title: `Product ${isUpdate ? 'updated' : 'created'}.`,
             status: 'success',
             duration: 9000,
@@ -78,6 +79,7 @@ const ProductFrom = ({ title = 'Add Product', product, isOpen, onClose }: Produc
         onError: () => {
           onClose();
           toast({
+            position: 'top-right',
             title: `Failed to ${isUpdate ? 'update' : 'create'} the product.`,
             status: 'error',
             duration: 9000,

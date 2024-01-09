@@ -6,14 +6,14 @@ import dynamic from 'next/dynamic';
 import { ServiceSection } from '@/ui/product-and-services';
 
 const ProductStatistics = dynamic(() => import('@/ui/product-and-services/ProductStatistics'), {
-  ssr: false,
+  ssr: true,
 });
 
 const ProductTable = dynamic(() => import('@/ui/product-and-services/ProductTable'), {
   ssr: false,
 });
 
-const Technician = dynamic(() => import('@/ui/product-and-services/Technician'), { ssr: false });
+const Technician = dynamic(() => import('@/ui/product-and-services/Technician'), { ssr: true });
 
 const Page = () => (
   <Box px='5'>
