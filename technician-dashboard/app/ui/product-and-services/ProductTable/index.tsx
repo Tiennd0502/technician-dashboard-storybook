@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useCallback, useMemo, useState } from 'react';
-import { Box, Button, Flex, Heading, VStack, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, VStack, useDisclosure, useToast } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -21,6 +21,8 @@ import ProductForm from '../ProductForm';
 
 const ProductTable = () => {
   const router = useRouter();
+  const toast = useToast();
+
   const [productEdit, setProductEdit] = useState<Product>();
   const [productFilter, setProductFilter] = useState<Filter>(DEFAULT_PRODUCT_FILTER);
   const [productDelete, setProductDelete] = useState<string>('');
@@ -85,9 +87,27 @@ const ProductTable = () => {
 
   const handleDeleteProduct = useCallback(() => {
     deleteProduct(productDelete, {
-      onSettled: handleCloseConfirmModal,
+      onSuccess: () => {
+        handleCloseConfirmModal();
+        toast({
+          position: 'top-right',
+          title: `Product deleted.`,
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        });
+      },
+      onError: () => {
+        toast({
+          position: 'top-right',
+          title: `Product delete failed.`,
+          status: 'error',
+          duration: 9000,
+          isClosable: true,
+        });
+      },
     });
-  }, [deleteProduct, handleCloseConfirmModal, productDelete]);
+  }, [deleteProduct, handleCloseConfirmModal, productDelete, toast]);
 
   const handleOpenConfirmModal = useCallback(
     (id: string) => {
