@@ -5,11 +5,15 @@ import dynamic from 'next/dynamic';
 // Components
 import { ServiceSection } from '@/ui/product-and-services';
 
-const ProductStatistics = dynamic(() => import('@/ui/product-and-services/ProductStatistics'));
+const ProductStatistics = dynamic(() => import('@/ui/product-and-services/ProductStatistics'), {
+  ssr: false,
+});
 
-const ProductTable = dynamic(() => import('@/ui/product-and-services/ProductTable'));
+const ProductTable = dynamic(() => import('@/ui/product-and-services/ProductTable'), {
+  ssr: false,
+});
 
-const Technician = dynamic(() => import('@/ui/product-and-services/Technician'));
+const Technician = dynamic(() => import('@/ui/product-and-services/Technician'), { ssr: false });
 
 const Page = () => (
   <Box px='5'>

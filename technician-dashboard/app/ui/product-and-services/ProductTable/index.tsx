@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 // Types
-import { Filter, STATUS, TableData } from '@/lib/interfaces';
+import { Filter, Product, STATUS, TableData } from '@/lib/interfaces';
 
 // Constants
 import { DEFAULT_PRODUCT_FILTER, ROUTES } from '@/lib/constants';
@@ -17,17 +17,21 @@ import { FilterIcon } from '@/ui/icons';
 
 // Hooks
 import { useFetchProducts, useProduct } from '@/lib/hooks';
+import ProductForm from '../ProductForm';
 
 const ProductTable = () => {
   const router = useRouter();
+  const [productEdit, setProductEdit] = useState<Product>();
   const [productFilter, setProductFilter] = useState<Filter>(DEFAULT_PRODUCT_FILTER);
   const [productDelete, setProductDelete] = useState<string>('');
 
+  const { isOpen: isOpenForm, onToggle: onToggleForm } = useDisclosure();
   const {
     isOpen: isOpenConfirmModal,
     onOpen: onOpenConfirmModal,
     onClose: onCloseConfirmModal,
   } = useDisclosure();
+
   const {
     deleteProduct: { mutate: deleteProduct, isPending: isDeleting },
   } = useProduct();
@@ -46,6 +50,11 @@ const ProductTable = () => {
     [productAll],
   );
 
+  const handleCloseForm = useCallback(() => {
+    productEdit && setProductEdit(undefined);
+    onToggleForm();
+  }, [onToggleForm, productEdit]);
+
   const handleSortProduct = useCallback((value: Filter) => {
     setProductFilter((prev: Filter) => ({
       ...prev,
@@ -54,8 +63,11 @@ const ProductTable = () => {
   }, []);
 
   const handleClickEditProduct = useCallback(
-    (id: string) => router.push(`${ROUTES.PRODUCT_AND_SERVICES}/${id}/edit`),
-    [router],
+    (id: string) => {
+      setProductEdit(products?.find((product) => product.id === id));
+      onToggleForm();
+    },
+    [onToggleForm, products],
   );
 
   const handleSearchProduct = useCallback((value: string) => {
@@ -155,6 +167,14 @@ const ProductTable = () => {
 
   return (
     <VStack spacing={7} p='7' borderWidth='1px' borderRadius='md' borderColor='primary' h='100%'>
+      {isOpenForm && (
+        <ProductForm
+          title={`${productEdit ? 'Edit' : 'Add'} Product`}
+          isOpen={isOpenForm}
+          product={productEdit}
+          onClose={handleCloseForm}
+        />
+      )}
       {isOpenConfirmModal && (
         <ConfirmModal
           title='Delete Product'
@@ -175,7 +195,7 @@ const ProductTable = () => {
         <Button as={Flex} gap='4' variant='outline' mr='0'>
           Filter <FilterIcon />
         </Button>
-        <Button as={Link} ml='4' href={`${ROUTES.PRODUCT_AND_SERVICES}/create`}>
+        <Button ml='4' onClick={onToggleForm}>
           Add new
         </Button>
       </Flex>

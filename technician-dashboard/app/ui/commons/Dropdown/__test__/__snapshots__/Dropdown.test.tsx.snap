@@ -18,15 +18,15 @@ exports[`Dropdown test cases should render correctly 1`] = `
         class="css-guqklo"
       >
         <span
-          aria-label="Avatar User"
+          aria-label="Avatar"
           class="chakra-avatar css-1ruhx4w"
         >
           <div
-            aria-label="John"
+            aria-label="Avatar"
             class="chakra-avatar__initials css-0"
             role="img"
           >
-            J
+            A
           </div>
         </span>
         <p
