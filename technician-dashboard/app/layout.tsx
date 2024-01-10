@@ -5,6 +5,7 @@ import { Layout } from '@/ui/commons';
 
 export const metadata: Metadata = {
   title: 'Technician Dashboard',
+  description: 'The home page in technical dashboard',
 };
 
 interface RootLayoutProps {

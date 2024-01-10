@@ -11,8 +11,9 @@ exports[`Sidebar test cases should render correctly 1`] = `
     <div
       class="css-1522hk"
     >
-      <div
+      <a
         class="css-1owjrhv"
+        href="/"
       >
         <img
           alt="Technician"
@@ -38,7 +39,7 @@ exports[`Sidebar test cases should render correctly 1`] = `
             At Home
           </p>
         </div>
-      </div>
+      </a>
     </div>
     <div
       class="css-buvjrh"
