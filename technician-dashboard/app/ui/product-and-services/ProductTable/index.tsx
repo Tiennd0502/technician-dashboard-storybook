@@ -11,13 +11,16 @@ import { Filter, Product, STATUS, TableData } from '@/lib/interfaces';
 // Constants
 import { DEFAULT_PRODUCT_FILTER, ROUTES } from '@/lib/constants';
 
+// Utils
+import { removeSpaces } from '@/lib/utils';
+
 // Components / icons
 import { ConfirmModal, Pagination, SearchBox, Spinner, StatusLabel, Table } from '@/ui/commons';
 import { FilterIcon } from '@/ui/icons';
+import ProductForm from '../ProductForm';
 
 // Hooks
 import { useFetchProducts, useProduct } from '@/lib/hooks';
-import ProductForm from '../ProductForm';
 
 const ProductTable = () => {
   const router = useRouter();
@@ -75,7 +78,7 @@ const ProductTable = () => {
   const handleSearchProduct = useCallback((value: string) => {
     setProductFilter((prev: Filter) => ({
       ...prev,
-      name: value,
+      name: removeSpaces(value, true),
       page: '1',
     }));
   }, []);

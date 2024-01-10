@@ -3,6 +3,7 @@
 import { memo, useState, useCallback, ChangeEvent, KeyboardEvent } from 'react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/react';
+import { removeSpaces } from '@/lib/utils';
 
 interface SearchBoxProps {
   onSearch: (value: string) => void;
@@ -14,8 +15,7 @@ const SearchBox = ({ onSearch }: SearchBoxProps) => {
   const handleSearch = useCallback(() => onSearch(keyword || ''), [keyword, onSearch]);
 
   const handleChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) =>
-      setKeyword(event?.target.value.replace(/\s+/g, ' ') || ''),
+    (event: ChangeEvent<HTMLInputElement>) => setKeyword(removeSpaces(event?.target.value || '')),
     [],
   );
 
