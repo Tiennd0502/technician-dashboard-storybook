@@ -41,7 +41,6 @@ interface ProductFromProps {
 }
 
 const ProductFrom = ({ title = 'Add Product', product, isOpen, onClose }: ProductFromProps) => {
-  const router = useRouter();
   const toast = useToast();
 
   const {
@@ -57,7 +56,7 @@ const ProductFrom = ({ title = 'Add Product', product, isOpen, onClose }: Produc
     },
   });
 
-  const handleClose = useCallback(() => router.back(), [router]);
+  const handleClose = useCallback(() => onClose(), [onClose]);
 
   const handleSubmitProduct = useCallback(
     (data: Product) => {
@@ -74,7 +73,6 @@ const ProductFrom = ({ title = 'Add Product', product, isOpen, onClose }: Produc
             duration: 9000,
             isClosable: true,
           });
-          router.refresh();
         },
         onError: () => {
           onClose();
@@ -88,7 +86,7 @@ const ProductFrom = ({ title = 'Add Product', product, isOpen, onClose }: Produc
         },
       });
     },
-    [product?.id, editProduct, createProduct, toast, router, onClose],
+    [product?.id, editProduct, createProduct, toast, onClose],
   );
 
   const isLoading = isCreating || isEditing;
