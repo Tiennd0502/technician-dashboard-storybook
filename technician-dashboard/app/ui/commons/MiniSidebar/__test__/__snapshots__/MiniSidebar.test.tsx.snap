@@ -8,8 +8,9 @@ exports[`MiniSidebar test cases should render correctly 1`] = `
     <div
       class="css-150u52e"
     >
-      <div
+      <a
         class="css-1owjrhv"
+        href="/"
       >
         <img
           alt="Technician"
@@ -35,7 +36,7 @@ exports[`MiniSidebar test cases should render correctly 1`] = `
             At Home
           </p>
         </div>
-      </div>
+      </a>
       <button
         aria-label="Icon Toggle Menu"
         class="chakra-button css-4xx2wk"

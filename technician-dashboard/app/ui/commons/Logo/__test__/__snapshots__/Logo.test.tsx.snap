@@ -2,8 +2,9 @@
 
 exports[`should render correctly 1`] = `
 <div>
-  <div
+  <a
     class="css-1owjrhv"
+    href="/"
   >
     <img
       alt="Technician"
@@ -29,6 +30,6 @@ exports[`should render correctly 1`] = `
         At Home
       </p>
     </div>
-  </div>
+  </a>
 </div>
 `;
