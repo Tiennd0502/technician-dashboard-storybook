@@ -1,11 +1,11 @@
 'use client';
 
-import { FC, ReactNode, useMemo } from 'react';
+import { FC, ReactNode, useEffect, useMemo, useState } from 'react';
 import { Grid, GridItem, useMediaQuery } from '@chakra-ui/react';
 
 import { MENU_ITEM_LIST, HEADER_INFO } from '@/lib/constants';
 
-import { Sidebar, Header, MiniSidebar } from '..';
+import { Sidebar, Header, MiniSidebar, Spinner } from '..';
 
 const GRID_TEMPLATE = `
   'nav header'
@@ -20,6 +20,7 @@ const GRID_SMALL_TEMPLATE = `
 
 const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const styledWrapper = useMemo(
     () =>
@@ -36,7 +37,13 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
     [isSmallScreen],
   );
 
-  return (
+  useEffect(() => {
+    if (!isLoaded) {
+      setIsLoaded(true);
+    }
+  }, [isLoaded]);
+
+  return isLoaded ? (
     <Grid gap='5' {...styledWrapper}>
       <GridItem area='nav'>
         {isSmallScreen ? (
@@ -50,6 +57,8 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
       </GridItem>
       <GridItem area='main'>{children}</GridItem>
     </Grid>
+  ) : (
+    <Spinner />
   );
 };
 
