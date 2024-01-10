@@ -18,7 +18,7 @@ const Header = (props: HeaderProps) => {
 
   return (
     <Flex alignItems='center' justifyContent='space-between' p={4} h={{ base: '60px', md: '80px' }}>
-      <Heading as='h1' variant='heading2Xl'>
+      <Heading as='h1' variant={{ base: 'headingXl', lg: 'heading2Xl' }}>
         {title}
       </Heading>
       <Flex gap='2'>
