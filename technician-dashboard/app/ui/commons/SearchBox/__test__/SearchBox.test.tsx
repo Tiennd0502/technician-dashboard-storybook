@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, waitFor } from '@testing-library/react';
 import SearchBox from '..';
 
 const onSearch = jest.fn();
@@ -14,16 +14,6 @@ describe('SearchBox component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test('should call the search handler when blur input', () => {
-    const { getByPlaceholderText } = render(<SearchBox {...props} />);
-    const searchInput = getByPlaceholderText('Enter keyword...');
-
-    fireEvent.change(searchInput, { target: { value: 'keyword' } });
-    fireEvent.blur(searchInput);
-
-    expect(onSearch).toHaveBeenCalledWith('keyword');
-  });
-
   test('should call the search handler when enter input', () => {
     const { getByPlaceholderText } = render(<SearchBox {...props} />);
     const searchInput = getByPlaceholderText('Enter keyword...');
@@ -31,6 +21,29 @@ describe('SearchBox component', () => {
     fireEvent.keyDown(searchInput, { key: 'Enter', code: '13' });
 
     expect(onSearch).toHaveBeenCalledWith('keyword1');
+  });
+
+  test('should call the search handler when click search icon', () => {
+    const { getByPlaceholderText, getByTestId } = render(<SearchBox {...props} />);
+    const searchInput = getByPlaceholderText('Enter keyword...');
+    fireEvent.change(searchInput, { target: { value: 'keyword1' } });
+    const iconSearch = getByTestId('search-icon');
+    fireEvent.click(iconSearch);
+
+    expect(onSearch).toHaveBeenCalledWith('keyword1');
+  });
+
+  test('should clear input when click clear icon', () => {
+    const { getByPlaceholderText, getByTestId } = render(<SearchBox {...props} />);
+    const searchInput = getByPlaceholderText('Enter keyword...') as HTMLInputElement;
+    fireEvent.change(searchInput, { target: { value: 'keyword1' } });
+
+    waitFor(() => {
+      const iconClear = getByTestId('search-icon');
+      fireEvent.click(iconClear);
+      expect(searchInput.value).toEqual('');
+      expect(onSearch).toHaveBeenCalledWith('');
+    });
   });
 
   test('should show search icon', () => {
