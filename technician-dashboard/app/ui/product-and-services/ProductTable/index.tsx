@@ -237,11 +237,13 @@ const ProductTable = () => {
             onDelete={handleOpenConfirmModal}
           />
 
-          <Pagination
-            onChange={handleChangePage}
-            total={totalPage}
-            page={+(productFilter?.page || 1)}
-          />
+          {!!products.length && (
+            <Pagination
+              onChange={handleChangePage}
+              total={totalPage}
+              page={+(productFilter?.page || 1)}
+            />
+          )}
         </>
       )}
     </VStack>
