@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { SERVICES } from '@/lib/__mocks__';
+import { SERVICES } from '@/lib/constants';
 import ServiceList from '..';
 
 describe('ServiceList test cases', () => {

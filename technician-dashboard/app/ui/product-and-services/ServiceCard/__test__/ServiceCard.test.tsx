@@ -1,13 +1,12 @@
 import { render } from '@testing-library/react';
 
-import { SERVICE } from '@/lib/__mocks__';
-import { CURRENCY_CHARACTERS } from '@/lib/constants';
+import { CURRENCY_CHARACTERS, SERVICES } from '@/lib/constants';
 
 import ServiceCard from '..';
 
 describe('ServiceCard test cases', () => {
   const props = {
-    service: SERVICE,
+    service: SERVICES[0],
     currencyCharacter: CURRENCY_CHARACTERS.EURO,
   };
 

@@ -1,10 +1,3 @@
-export const SERVICE = {
-  id: '01',
-  name: 'Carpenter',
-  price: 45,
-  image: 'https://i.ibb.co/tPQcjvH/service01.webp',
-};
-
 export const SERVICES = [
   {
     id: '01',

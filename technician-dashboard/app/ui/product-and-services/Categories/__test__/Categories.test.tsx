@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import { CATEGORIES } from '@/lib/__mocks__';
+import { CATEGORIES } from '@/lib/constants';
 import Categories from '..';
 
 describe('Categories test cases', () => {

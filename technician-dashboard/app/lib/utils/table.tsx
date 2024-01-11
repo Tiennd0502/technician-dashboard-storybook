@@ -1,42 +1,7 @@
-import { STATUS } from '@/lib/interfaces';
 import { StatusLabel } from '@/ui/commons';
+import { STATUS } from '../interfaces';
 
-export const PRODUCTS = [
-  {
-    id: '1',
-    name: 'Washing machine',
-    brand: 'Hitachi',
-    service: 'Repair',
-    status: 1,
-  },
-  {
-    id: '2',
-    name: 'Air conditioner',
-    brand: 'LG',
-    service: 'Installation',
-    status: 0,
-  },
-  {
-    id: '3',
-    name: 'Smart TV',
-    brand: 'OnePlus',
-    service: 'Uninstallation',
-    status: 1,
-  },
-  {
-    id: '4',
-    name: 'Water purifier',
-    brand: 'Kent',
-    service: 'Repair',
-    status: 1,
-  },
-];
-
-const customViewStatus = (value: string | number | boolean) => (
-  <StatusLabel value={value as STATUS} />
-);
-
-export const PRODUCT_HEADER_COLUMNS = [
+export const generateProductHeaderColumn = () => [
   {
     key: 'checkbox',
     label: 'Checkbox',
@@ -78,7 +43,7 @@ export const PRODUCT_HEADER_COLUMNS = [
       md: '100%',
       lg: '18%',
     },
-    customView: customViewStatus,
+    customView: (value: string | number | boolean) => <StatusLabel value={value as STATUS} />,
   },
   {
     key: 'actions',
