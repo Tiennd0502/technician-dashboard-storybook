@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { SERVICES } from '@/lib/__mocks__';
-import { CURRENCY_CHARACTERS } from '@/lib/constants';
+import { CURRENCY_CHARACTERS, SERVICES } from '@/lib/constants';
 
 import ServiceCard from '.';
 

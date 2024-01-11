@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CATEGORIES } from '@/lib/__mocks__';
+import { CATEGORIES } from '@/lib/constants';
 
 import Categories from '.';
 

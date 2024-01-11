@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Table from '.';
-import { PRODUCTS, PRODUCT_HEADER_COLUMNS } from '@/lib/__mocks__';
-import { DEFAULT_PRODUCT_FILTER } from '@/lib/constants';
+import { DEFAULT_PRODUCT_FILTER, PRODUCTS } from '@/lib/constants';
+import { generateProductHeaderColumn } from '@/lib/utils/table';
 
 const meta: Meta<typeof Table> = {
   title: 'Components/Table',
@@ -17,7 +17,7 @@ type Story = StoryObj<typeof Table>;
 export const Default: Story = {
   args: {
     filter: DEFAULT_PRODUCT_FILTER,
-    columns: PRODUCT_HEADER_COLUMNS,
+    columns: generateProductHeaderColumn(),
     data: PRODUCTS,
   },
 };

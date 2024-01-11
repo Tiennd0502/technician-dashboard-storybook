@@ -1,8 +1,8 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import * as mediaQueryHooks from '@chakra-ui/react';
 
-import { DEFAULT_PRODUCT_FILTER, NO_DATA } from '@/lib/constants';
-import { PRODUCTS, PRODUCT_HEADER_COLUMNS } from '@/lib/__mocks__';
+import { DEFAULT_PRODUCT_FILTER, NO_DATA, PRODUCTS } from '@/lib/constants';
+import { generateProductHeaderColumn } from '@/lib/utils/table';
 
 import Table from '..';
 import { SORT_TYPE } from '@/lib/interfaces';
@@ -20,13 +20,14 @@ jest.mock('@chakra-ui/react', () => {
 const onDelete = jest.fn();
 const onEdit = jest.fn();
 const onSort = jest.fn();
+const columns = generateProductHeaderColumn();
 
 describe('Table test cases', () => {
   jest.spyOn(mediaQueryHooks, 'useMediaQuery').mockImplementationOnce(() => [true]);
 
   const props = {
     filter: DEFAULT_PRODUCT_FILTER,
-    columns: PRODUCT_HEADER_COLUMNS,
+    columns: columns,
     data: PRODUCTS,
   };
 
@@ -39,7 +40,7 @@ describe('Table test cases', () => {
     const { getByTestId } = render(<Table {...props} />);
     const header = getByTestId('list-header');
 
-    expect(header.childNodes).toHaveLength(PRODUCT_HEADER_COLUMNS.length);
+    expect(header.childNodes).toHaveLength(columns.length);
   });
 
   test('Should render empty header elements', () => {
@@ -52,14 +53,14 @@ describe('Table test cases', () => {
   });
 
   test('Should render empty body elements', () => {
-    render(<Table data={[]} columns={PRODUCT_HEADER_COLUMNS} filter={DEFAULT_PRODUCT_FILTER} />);
+    render(<Table data={[]} columns={columns} filter={DEFAULT_PRODUCT_FILTER} />);
 
     const text = screen.getByTestId('no-data');
     expect(text.innerHTML).toEqual(NO_DATA);
   });
 
   test('Should render empty data', () => {
-    render(<Table data={[]} columns={PRODUCT_HEADER_COLUMNS} filter={DEFAULT_PRODUCT_FILTER} />);
+    render(<Table data={[]} columns={columns} filter={DEFAULT_PRODUCT_FILTER} />);
 
     const text = screen.getByTestId('no-data');
     expect(text.innerHTML).toEqual(NO_DATA);
